@@ -35,35 +35,24 @@ var helpers = [
   'build/js/script.js'
 ];
 
-var _dirProduction = 'HTML';
 
 const paths = {
   scripts: {
     src: helpers,
-    dest: 'assets/scripts/',
-    destProd: _dirProduction+'/assets/scripts/'
+    dest: 'assets/scripts/'
   },
   styles: {
     src: 'build/sass/main.sass',
     dest: 'assets/styles/',
-    watch: 'build/sass/**/*.sass',
-    destProd: _dirProduction+'/assets/styles/'
-  },
-  fonts: {
-    src: 'assets/fonts/**/*',
-    destProd: _dirProduction+'/assets/fonts'
-  },
-  images: {
-    src: 'assets/images/**/*',
-    destProd: _dirProduction+'/assets/images'
+    watch: 'build/sass/**/*.sass'
   }
 };
  
 /*
  * For small tasks you can export arrow functions
  */
-// export const clean = () => del([ paths.styles.dest, paths.scripts.dest, paths.fonts.destProd, _dirProduction ]);
-export const clean = () => del([ paths.styles.dest, _dirProduction ]);
+
+export const clean = () => del([ paths.styles.dest ]);
 
 /*
  * You can also declare named functions and export them as tasks
@@ -77,8 +66,8 @@ export function scripts() {
     .pipe(header(banner, { pkg : pkg } )) 
     .pipe(gulp.dest(paths.scripts.dest))
     .pipe(mode.production(uglify()))
-    .pipe(header(banner, { pkg : pkg } )) 
-    .pipe(mode.production(gulp.dest(paths.scripts.destProd)))
+    .pipe(header(banner, { pkg : pkg } ))
+    .pipe(mode.production(gulp.dest(paths.scripts.dest)))
     .pipe(browserSync.stream()); 
 }
 
@@ -96,19 +85,9 @@ export function styles() {
     .pipe(gulp.dest(paths.styles.dest)) 
     .pipe(mode.production(csso())) 
     .pipe(header(banner, { pkg : pkg } )) 
-    .pipe(mode.production(gulp.dest(paths.styles.destProd)))
+    .pipe(mode.production(gulp.dest(paths.styles.dest)))
     .pipe(browserSync.stream()); 
 } 
-
-export function fonts() {
-  return gulp.src(paths.fonts.src)
-    .pipe(gulp.dest(paths.fonts.destProd));
-}
-
-export function images() {
-  return gulp.src(paths.images.src)
-    .pipe(gulp.dest(paths.images.destProd));
-}
  
  /*
   * You could even use `export as` to rename exported tasks
@@ -128,10 +107,6 @@ export function serve() {
     server: {
         baseDir: "./"
     },
-    // port: 9090,
-    // tunnel: true,
-    // online: true,
-    // open: "local",
     notify: false
   });
 }
@@ -141,7 +116,7 @@ export function serve() {
  * for example to set task names that would otherwise be invalid
  */
 const run = gulp.series(clean, gulp.parallel(scripts, styles, serve, watchFiles));
-const build = gulp.series(clean, gulp.parallel(scripts, styles, fonts, images));
+const build = gulp.series(clean, gulp.parallel(scripts, styles));
 gulp.task('run', run);
 gulp.task('build', build);
  
