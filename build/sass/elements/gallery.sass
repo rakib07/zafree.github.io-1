@@ -1,0 +1,85 @@
+.Gallery
+  position: relative
+  overflow-y: hidden
+  &__scroll
+    margin-bottom: -30px
+    padding-bottom: 30px
+    // cursor: -webkit-grab
+    // cursor: grab
+    overflow-x: scroll
+    &::-webkit-scrollbar
+      -webkit-appearance: none
+      display: none
+  &__container
+    // user-select: none
+    // pointer-events: none
+    // will-change: transform
+    +container
+  &__row
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    // margin-left: -30px
+    // margin-right: -30px
+  &__col
+    min-height: 1px
+    width: 50%
+    min-width: 50%
+    &:not(:last-child)
+      margin-right: $gutter/3
+    &:last-child
+      box-sizing: content-box
+      padding-right: $gutter
+      +laptop
+        padding-right: calc(((100vw - 1430px) / 2) + 70px)
+    .img
+      position: relative
+      padding-bottom: 100%
+      background-color: rgba($black, .1)
+      border-radius: 6px
+      overflow: hidden 
+      width: 100%
+    img
+      display: block
+      border-radius: 6px
+      overflow: hidden
+
+
+// .carousel
+//   position: relative
+//   overflow-y: hidden
+//   &__slider
+//     white-space: nowrap
+//     overflow-x: auto
+//     overflow-y: hidden
+//     &::-webkit-scrollbar
+//       -webkit-appearance: none
+//       display: none
+//   &__container
+//     +container
+//   &__cell
+//     display: inline-block
+//     vertical-align: top
+//     white-space: normal
+//     width: 50%
+//     position: relative
+//     &:not(:last-child)
+//       margin-right: $gutter/3
+//     &:last-child
+//       box-sizing: content-box
+//       padding-right: $gutter
+//       +laptop
+//         padding-right: calc(((100vw - 1430px) / 2) + 70px)
+
+
+//     .img
+//       position: relative
+//       padding-bottom: 100%
+//       background-color: rgba($black, .1)
+//       border-radius: 6px
+//       overflow: hidden 
+//       width: 100%
+//     img
+//       display: block
+//       border-radius: 6px
+//       overflow: hidden

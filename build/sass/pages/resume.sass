@@ -1,0 +1,214 @@
+.ResumeHero
+  position: relative
+  padding-top: 20px
+  padding-bottom: 20px
+  +laptop
+    padding-top: 120px
+    padding-bottom: 80px
+  &__container
+    +container1000
+  &__title
+    +title-hero
+  &__subtitle
+    +subtitle-hero
+
+  .mail,
+  .phone
+    color: #AEAEAE
+    +copy-read
+    margin-bottom: 0
+    // font-size: 16px
+    // line-height: 26px
+    // font-weight: 200
+    +laptop
+      display: none
+      // font-size: 19px
+      // line-height: 26px
+
+.ResumeLink
+  position: relative
+  padding-bottom: 100px
+  +laptop
+    padding-top: 60px
+    padding-bottom: 160px
+  &__container
+    +container1000
+    +laptop
+      display: flex
+      flex-direction: row
+
+  &__skills,
+  &__tools,
+  &__links,
+  &__inspiration
+    position: relative
+    padding-top: 50px
+    font-weight: 500
+    +laptop
+      flex: 1
+      padding-top: 0
+  
+  &__links,
+  &__inspiration
+    display: none
+    +laptop
+      display: block
+
+  &__inspiration
+    +laptop
+      max-width: 188px
+
+  &__title
+    +copy-read
+    color: #757575
+  &__stream
+    margin-top: 15px
+    +laptop
+      margin-top: 40px
+  &__item
+    +copy-read
+    line-height: 1.11
+    a
+      &:hover
+        color: #2776ed
+        text-decoration: underline
+
+
+.ResumeExperience
+  position: relative
+  padding-top: 100px
+  +laptop
+    padding-top: 160px
+    padding-bottom: 120px
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 1px
+    background-color: #ddd
+    +laptop
+      width: 1000px
+      left: 50%
+      transform: translateX(-50%)
+  &__container
+    +container1000
+  &__label
+    font-size: 2.5em
+    line-height: 1
+    font-family: $family-sans
+    color: $black
+    font-weight: 500
+    +laptop
+      font-size: 3.2em
+  &__list
+    padding-top: 40px
+    padding-bottom: 40px
+  &__item
+    position: relative
+    margin-top: 40px
+    padding-bottom: 40px
+    +laptop
+      max-width: 630px
+      margin-left: auto
+      margin-top: $gutter*3
+      // margin-top: 160px
+    &:first-child
+      +laptop
+        margin-top: $gutter*4
+
+  &__no
+    font-size: 36px
+    // font-style: italic
+    font-family: $family-sans
+    font-weight: 500
+    line-height: 1
+    letter-spacing: 0.016em
+    color: #ddd
+    margin-bottom: 20px
+    +laptop
+      position: absolute
+      left: 0
+      top: 0
+      font-size: 13.6em
+      color: #EFEFEF
+      margin-left: -220px
+      margin-top: -10px
+
+  &__title
+    +title
+
+  &__subtitle
+    +subtitle
+
+  &__desc
+    +copy
+    +laptop
+      max-width: 540px
+      display: block
+
+  &__innerLabel
+    +copy-read
+    font-weight: 500
+    margin-top: 1.5em
+    margin-bottom: 0
+
+  &__time
+    +copy-read
+    color: #757575
+
+  .carousel
+    margin-top: 10px
+    &__cell
+      width: 56px
+      &:first-child
+        padding-left: 0
+    .box
+      position: relative
+      padding-bottom: 100%
+      background-color: rgba(0, 0, 0, .1)
+      border-radius: 6px
+      overflow: hidden
+    
+
+.ResumeEducation
+  position: relative
+  padding-top: 100px
+  padding-bottom: 200px
+  background-color: #fafafa
+  background-image: linear-gradient(#fafafa, #ffffff)
+  +laptop
+    padding-top: 0
+    background-color: transparent
+    background-image: none
+    display: none
+  &__container
+    +container1000
+  &__content
+    +laptop
+      padding: 80px 100px
+      background-color: #fafafa
+  &__label
+    font-size: 1.9em
+    line-height: 1
+    font-family: $family-sans
+    // font-style: italic
+    font-weight: 500
+    color: #ddd
+    margin-bottom: 30px
+    letter-spacing: 0.06em
+    text-transform: uppercase
+  &__title
+    font-size: 1.9em
+    line-height: 26px
+    font-family: $family-serif
+    font-weight: 300
+  &__copy
+    font-size: 1.6em
+    line-height: 24px
+    font-weight: 200
+    color: #AEAEAE
+    margin-top: 5px
+    +laptop
+      max-width: 360px

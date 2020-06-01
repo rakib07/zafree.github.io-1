@@ -1,0 +1,29 @@
+.modal
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 12
+  opacity: 0
+  visibility: hidden
+  transition: none $speed*5 ease
+  transition-property: opacity, visibility
+  &__overlay
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 11
+    cursor: pointer
+    background: rgba(0,0,0,.33)
+  &__content
+    position: relative
+    z-index: 12
+    background: $white
+
+  // modifier
+  &--open
+    opacity: 1
+    visibility: visible

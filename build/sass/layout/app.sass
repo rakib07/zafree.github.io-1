@@ -1,0 +1,131 @@
+//  app
+.Hamburger
+  position: fixed
+  z-index: 200
+  top: 0
+  right: 0
+  left: 0
+  display: flex
+  flex-wrap: wrap
+  pointer-events: none
+  height: 80px
+  +laptop
+    height: 130px
+  &__container
+    +container
+    flex-grow: 1
+    flex-shrink: 1
+    flex-basis: 0%
+    display: inline-flex
+    flex-direction: row
+    align-items: center
+  &__button
+    +button
+    // background-color: rgba($black, .03)
+    height: 56px
+    width: 56px
+    margin-left: auto
+    margin-right: -17px
+    pointer-events: auto
+    transition: margin-right $speed*4 $easing
+    &:hover,
+    &:focus
+      outline: none
+    .rect1,
+    .rect2
+      transform: none
+      transform-origin: 11px 11px
+      transition: all $speed*4 $easing
+    &--cancel
+      margin-right: -15px
+      .rect1
+        transform: translateY(-2.5px) translateX(-2.5px) rotate(135deg)
+      .rect2
+        transform: translateY(-2.5px) translateX(2.5px) rotate(45deg)
+        
+  &__svg
+    // background-color: rgba($black, .3)
+    height: 22px
+    width: 22px
+    position: relative
+    display: inline-block
+    vertical-align: top
+    
+
+
+.Navigation
+  display: none
+  +laptop
+    position: relative
+    display: flex
+    flex: 1
+    justify-content: flex-end
+
+    &__link
+      position: relative
+      height: 56px
+      display: inline-flex
+      align-items: center
+      font-size: 1.6em
+      color: $black
+      text-decoration: none
+      padding-left: 10px
+      padding-right: 10px
+      pointer-events: all
+      font-weight: 500
+      // font-family: $family-sans-chat
+      // background-color: rgba($black, .03)
+      &:not(:last-child)
+        margin-right: 30px
+      &:last-child
+        margin-right: 4px + 56
+      
+      &--isActive
+        &::before
+          content: ""
+          position: absolute
+          bottom: 0
+          left: 50%
+          margin-left: -2px
+          width: 4px
+          height: 4px
+          border-radius: 4px
+          background-color: $black
+    
+
+      
+#navigation
+  z-index: 100
+  // .modal__content
+  //   transform: translateY(-100%)
+
+
+.Header
+  position: relative
+  z-index: 50
+  height: 80px
+  // background-color: rgba($black, .2)
+  display: flex
+  align-items: center
+  +laptop
+    height: 130px
+  &__container
+    +container
+    flex: 1 
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.Logo
+  position: relative
+  // background-color: rgba($black, .03)
+  display: inline-flex
+  height: 56px
+  align-items: center
+  justify-content: flex-start
+  &__svg
+    height: 14px
+    +laptop
+      height: 18px
+    // width: 170px
+    // background-color: rgba($black, .03)

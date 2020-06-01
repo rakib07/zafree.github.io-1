@@ -1,0 +1,50 @@
+.Intro
+  position: relative
+  padding-top: 60px
+  padding-bottom: 80px
+  background-color: #fafafa
+  background-image: linear-gradient(#ffffff, #fafafa)
+  +laptop
+    background-image: none
+    padding-top: 100px
+    padding-bottom: 180px
+  &__container
+    +container
+    +laptop
+      text-align: center
+  &__label
+    +label-hero
+    margin-top: 0
+  &__heading
+    +heading
+    max-width: 680px
+    margin-left: auto
+    margin-right: auto
+    +laptop
+      text-align: center
+
+  .Gallery
+    +laptop
+      display: none
+    &__scroll
+      +laptop
+        overflow-x: hidden
+    &__container
+      +laptop
+        max-width: 720px
+    &__label
+      +label-hero
+      margin-bottom: 1.25em
+    &__row
+      +laptop
+        flex-wrap: wrap
+        justify-content: center
+    &__col
+      width: 27%
+      min-width: 27%
+      +laptop
+        width: 70px
+        min-width: 70px
+        padding: 0
+        margin: 5px
+        

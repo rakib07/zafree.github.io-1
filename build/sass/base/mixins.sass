@@ -1,0 +1,218 @@
+=container
+  position: relative
+  min-height: 1px
+  margin-right: auto
+  margin-left: auto
+  padding-right: 30px
+  padding-left: 30px
+  +tablet
+    max-width: 1390px
+    padding-right: 50px
+    padding-left: 50px
+  +laptop
+    max-width: 1430px
+    padding-right: 70px
+    padding-left: 70px
+
+=container1000
+  position: relative
+  min-height: 1px
+  margin-right: auto
+  margin-left: auto
+  padding-right: 30px
+  padding-left: 30px
+  +tablet
+    max-width: 1100px
+    padding-right: 50px
+    padding-left: 50px
+  +laptop
+    max-width: 1140px
+    padding-right: 70px
+    padding-left: 70px
+    
+=clearfix
+  &:before,
+  &:after
+    content: ""
+    display: table
+  &:after
+    clear: both
+
+=placeholder
+  $placeholders: ':-moz' ':-webkit-input' '-moz' '-ms-input'
+  @each $placeholder in $placeholders
+    &:#{$placeholder}-placeholder
+      @content
+
+
+=button
+  position: relative
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  text-decoration: none
+  cursor: pointer
+  border: 0
+  padding: 0
+  background-color: transparent
+  white-space: nowrap
+  text-rendering: auto
+  user-select: none
+  letter-spacing: 0.03em
+  font-style: normal
+  box-shadow: none
+  &:hover,
+  &:focus
+    outline: none
+
+
+=tablet
+  @media screen and (min-width: $tablet)
+    @content
+
+=laptop
+  @media screen and (min-width: $laptop)
+    @content
+
+
+
+// type
+// IBM Plex Serif :  100 200 300
+
+// heading
+=heading
+  font-size: 1.9em
+  line-height: 1.44759
+  font-family: $family-serif
+  font-weight: 300
+  letter-spacing: -0.01em
+  +laptop
+    font-size: 3.2em
+    font-weight: 200
+
+
+// title
+
+=title-hero
+  font-size: 3.6em
+  font-family: $family-serif
+  font-weight: 300
+  line-height: 1.11538
+  letter-spacing: -0.025em
+  margin-bottom: 0.09615em
+  +laptop
+    font-size: 5.6em
+    font-weight: 200
+
+=subtitle-hero
+  font-size: 3.6em
+  font-family: $family-serif
+  font-weight: 200
+  line-height: 1.11538
+  letter-spacing: -0.035em
+  color: #8d8f9a
+  margin-bottom: .5em
+  +laptop
+    font-size: 5.6em
+    font-weight: 100
+
+
+=title
+  font-size: 3.4em
+  font-family: $family-serif
+  font-weight: 300
+  line-height: 1.11538
+  letter-spacing: -0.025em
+  margin-bottom: 0.09615em
+  +laptop
+    font-size: 5.2em
+    font-weight: 200
+
+=subtitle
+  font-size: 3.4em
+  font-family: $family-serif
+  font-weight: 200
+  line-height: 1.11538
+  letter-spacing: -0.035em
+  color: #8d8f9a
+  margin-bottom: .5em
+  +laptop
+    font-size: 5.2em
+    font-weight: 100
+
+=title-sm
+  font-size: 3.2em
+  font-family: $family-serif
+  font-weight: 300
+  line-height: 1.11538
+  letter-spacing: -0.025em
+  margin-bottom: 0.09615em
+  +laptop
+    font-size: 4.4em
+    font-weight: 200
+
+=subtitle-sm
+  font-size: 3.2em
+  font-family: $family-serif
+  font-weight: 200
+  line-height: 1.11538
+  letter-spacing: -0.035em
+  color: #8d8f9a
+  margin-bottom: .5em
+  +laptop
+    font-size: 4.4em
+    font-weight: 100
+
+
+
+// copy
+// National 2     :  300 300i  400  500  
+
+=copy-hero
+  font-size: 1.9em
+  letter-spacing: .025em
+  line-height: 1.55556
+  font-weight: 300
+  margin-bottom: 1em
+  +laptop
+    font-size: 2.4em
+
+=copy
+  font-size: 1.8em
+  letter-spacing: .025em
+  line-height: 1.55556
+  font-weight: 300
+  margin-bottom: 1em
+  +laptop
+    font-size: 2em
+
+=copy-read
+  font-size: 1.7em
+  letter-spacing: .025em
+  line-height: 1.55556
+  font-weight: 300
+  margin-bottom: 1em 
+  +laptop
+    font-size: 1.8em
+
+=copy-sm
+  font-size: 1.4em
+  letter-spacing: .025em
+  line-height: 1.55556
+  font-weight: 300
+  margin-bottom: 1em
+  +laptop
+    font-size: 1.5em  
+
+
+// labels
+=label-hero
+  font-size: 1.9em
+  letter-spacing: .025em
+  line-height: 1.55556
+  font-weight: 500
+  margin-top: 2.08333em
+  margin-bottom: .83333em
+  +laptop
+    font-size: 2.4em  

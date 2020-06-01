@@ -1,0 +1,778 @@
+.DeligramBrand
+  padding-top: $gutter*3
+  padding-bottom: $gutter*3
+  +laptop
+    padding-top: $gutter*6
+    padding-bottom: $gutter*6
+  &__container
+    +container
+  &__heading
+    padding-bottom: 30px
+    +laptop
+      padding-bottom: 70px
+  &__title
+    +title
+    max-width: 8.6667em
+  &__subtitle
+    +subtitle
+    max-width: 10.9568em
+    margin-bottom: .6em
+  &__copy
+    +copy
+    max-width: 540px
+
+  &__logoBlock
+    $LogoBlockColWidth: 345px
+    $LogoBlockColWidth-sm: 173px
+    .LogoBlock
+      &__row
+        margin-bottom: $gutter*2
+        +laptop
+          display: flex
+          flex-flow: row wrap
+          justify-content: space-around 
+          margin-bottom: 0
+          &:first-child
+            margin-bottom: 80px
+          &:last-child
+            margin-top: 70px
+      &__col
+        width: $LogoBlockColWidth/1.5
+        margin-left: auto
+        margin-right: auto
+        &:not(:last-child)
+          margin-bottom: $gutter
+          +laptop
+            margin-bottom: 0
+        +laptop
+          width: $LogoBlockColWidth
+
+        &--sm
+          width: $LogoBlockColWidth-sm/1.5
+          +laptop
+            width: $LogoBlockColWidth-sm
+
+  &__logoVideo
+    position: relative
+    margin-left: -$gutter
+    margin-right: -$gutter
+    margin-top: $gutter*2
+    +laptop
+      margin-left: 0
+      margin-right: 0
+      margin-top: $gutter*4
+  &__logoVideoWrapper
+    position: relative
+    padding-bottom: 125%
+    background-color: #783392
+    +laptop
+      padding-bottom: 56.25%
+    .AutoplayVideo
+      display: block
+      position: absolute
+      height: auto
+      width: 100%
+    .v1x
+      +laptop
+        display: none
+    .v2x
+      display: none
+      +laptop
+        display: block
+
+  &__pallette
+    margin-top: $gutter*2
+    +laptop
+      margin-top: $gutter*3
+
+    .Pallette
+      // +container1000
+      max-width: 1000px
+      margin-left: auto
+      margin-right: auto
+      &__inner
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        +laptop
+          justify-content: space-around
+      &__colLeft
+        display: flex
+        flex-wrap: wrap
+        align-self: flex-start
+        // background-color: rgba($black, 0.1)
+        width: 80%
+        +laptop
+          width: 35%
+      &__colRight
+        // background-color: rgba(red, 0.1)
+        display: flex
+        flex-wrap: wrap
+        align-self: flex-start
+        // justify-content: flex-end
+        width: 100%
+        margin-top: 15%
+        +laptop
+          width: 35%
+          margin-top: 15%
+        
+      &__color,
+      &__colorsm
+        position: relative
+        display: block
+        // background-color: #ddd
+        // margin: 5px
+        display: inline-flex
+        &::before
+          content: attr(data-color)
+          position: absolute
+          bottom: 10%
+          left: 0
+          right: 0
+          color: $white
+          text-align: center
+          text-transform: lowercase
+          +copy-sm
+
+      &__color
+        width: 42%
+        margin: 4%
+        padding-bottom: 83%
+        border-radius: 500em
+        +laptop
+          width: 44%
+          margin: 3%
+      &__colorsm
+        width: 27.3333333%
+        margin: 3%
+        padding-bottom: 50%
+        border-radius: 500em
+    p
+      +copy-sm
+      padding-left: 15px
+      padding-right: 15px
+      display: block
+      width: 100%
+      margin-top: 1em
+      text-align: center
+
+    .color
+      &--783392
+        background-color: #783392
+      &--FCBF14
+        background-color: #FCBF14
+        &::before
+          color: #1A1718
+      &--EE395F
+        background-color: #EE395F
+      &--41B468
+        background-color: #41B468
+      &--74CDDA
+        background-color: #74CDDA
+      &--1A1718
+        background-color: #1A1718
+      &--515963
+        background-color: #515963
+      &--CDD0D2
+        background-color: #CDD0D2
+        &::before
+          color: #1A1718
+
+// We love to talk. Let's see what you have to say!
+
+.LetsStart
+  // padding-bottom: $gutter
+  // +laptop
+  //   padding-bottom: $gutter*2
+  &__heading
+    padding-top: $gutter*3.5
+    padding-bottom: $gutter
+    background-color: #1F1F1F
+    +laptop
+      padding-top: $gutter*6
+      padding-bottom: $gutter*2
+
+  &__imageContain
+    background-color: #1F1F1F
+    background-image: linear-gradient(#1F1F1F 90%, #fff 90%)
+    +laptop
+      background-image: linear-gradient(#1F1F1F 82%, #fff 82%)
+
+  &__container
+    +container
+  
+  &__title
+    +title
+    color: $white
+    // max-width: 8.6667em
+  &__subtitle
+    +subtitle
+    color: #B2B2B2
+    // max-width: 10.9568em
+    margin-bottom: .6em
+  &__copy
+    +copy
+    color: $white
+    max-width: 520px
+
+  &__row
+    +laptop
+      margin-left: -$gutter
+      margin-right: -$gutter
+  &__imageBlockWrapper
+    +laptop
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      max-width: 100%
+      // margin-top: -$gutter/2
+  &__imageBlock
+    // margin-bottom: $gutter
+    +laptop
+      width: 50%
+      // padding: $gutter/2
+
+.Quote--afterLetsStart
+  padding-top: $gutter*3
+  padding-bottom: $gutter*3
+  background-color: $white
+  +laptop
+    padding-top: $gutter*7
+    padding-bottom: $gutter*7
+
+.Affix--deligramHome
+  .Affix__sideImage
+    background-color: #252525
+
+.DeligramIcon
+  padding-bottom: $gutter
+  border-top: 1px solid #ebebeb
+  +laptop
+    border-top: none
+    padding-bottom: $gutter*5
+  &__container
+    +container
+  &__heading
+    
+    padding-top: $gutter*2.5
+    padding-bottom: $gutter
+    +laptop
+      border-top: 1px solid #ebebeb
+      padding-top: $gutter*5
+      padding-bottom: $gutter*2
+  &__title
+    +title-sm
+    // max-width: 8.6667em
+  &__subtitle
+    +subtitle-sm
+    // max-width: 10.9568em
+    margin-bottom: .6em
+  &__copy
+    +copy
+    max-width: 520px
+
+  &__row
+    +laptop
+      margin-left: -15px
+      margin-right: -15px
+  &__imageContain
+    +laptop
+      display: flex
+      max-width: 100%
+      margin-top: -$gutter/2
+  &__item
+    margin-bottom: $gutter*2
+    +laptop
+      width: 33.33%
+      padding: $gutter/2
+    p
+      +copy-sm
+      color: #757575
+      margin-top: 1em
+      +laptop
+        margin-top: 2em
+  &__imageBlock
+    // margin-bottom: $gutter
+    +laptop
+
+.Pick
+  padding-bottom: $gutter
+  +laptop
+    padding-bottom: $gutter*3
+
+  // $root: &;
+
+  &__container
+    +container
+
+  &__heading
+    border-top: 1px solid #ebebeb
+    padding-top: $gutter*2.5
+    padding-bottom: $gutter
+    +laptop
+      padding-top: $gutter*6
+      padding-bottom: $gutter*2
+      
+  &__content
+    max-width: 540px + $gutter
+    padding-right: $gutter
+      
+  &__title
+    +title
+  &__subtitle
+    +subtitle
+  &__copy
+    +copy
+
+  &__imagesLeft
+    +laptop
+      width: 36.435%
+      // width: 470px
+      max-width: 375px + 60
+      margin-left: $gutter*2
+      margin-top: -35%
+  &__imagesRight
+    +laptop
+      width: 36.435%
+      max-width: 375px + 60
+      margin-right: $gutter*2
+  &__item
+    margin-bottom: $gutter*2
+    +laptop
+      width: 100%
+      margin-bottom: $gutter*5
+    p
+      +copy-read
+      margin-top: 1em
+      padding-right: $gutter/2
+      +laptop
+        max-width: 345px + $gutter/2
+        margin-top: 2em
+  
+  &__images
+    +laptop
+      padding-top: $gutter*2
+      position: relative
+      display: flex
+      flex-direction: row-reverse
+      justify-content: center
+  &__imageWrapper
+    padding: $gutter/2
+    // background-color: #f9f9f9
+    background-color: #252525
+    +laptop
+      padding: $gutter
+  &__videoAspectRatio
+    position: relative
+    padding-bottom: 197.333%
+    background-color: $white
+    .AutoplayVideo
+      position: absolute
+      top: 0
+      left: 0
+
+.NoDistraction
+  padding-top: $gutter*2.5
+  padding-bottom: $gutter
+  +laptop
+    padding-top: $gutter*6
+    padding-bottom: $gutter*2
+
+  &__container
+    +container
+
+  &__heading
+    padding-bottom: $gutter
+    +laptop
+      padding-top: $gutter
+      display: flex
+      justify-content: flex-end
+      
+  &__content
+    max-width: 500px + $gutter
+    padding-right: $gutter
+      
+  &__title
+    +title
+    // color: $white
+    max-width: 440px
+  &__subtitle
+    +subtitle
+    max-width: 440px
+    // color: #9ea0a6
+  &__copy
+    +copy
+    // color: $white
+
+  &__imagesLeft
+    +laptop
+      width: 36.435%
+      // width: 470px
+      max-width: 375px + 60
+      margin-right: $gutter*2
+      margin-top: -43%
+  &__imagesRight
+    +laptop
+      width: 36.435%
+      max-width: 375px + 60
+      margin-left: $gutter*2
+  &__item
+    margin-bottom: $gutter*2
+    +laptop
+      width: 100%
+      margin-bottom: $gutter*5
+    p
+      +copy-read
+      margin-top: 1em
+      padding-right: $gutter/2
+      +laptop
+        max-width: 345px + $gutter/2
+        margin-top: 2em
+
+  &__images
+    +laptop
+      padding-top: $gutter*2
+      position: relative
+      display: flex
+      justify-content: center
+  &__imageWrapper
+    padding: $gutter/2
+    background-color: #252525
+    +laptop
+      padding: $gutter
+
+  &__videoAspectRatio
+    position: relative
+    padding-bottom: 197.333%
+    background-color: $white
+    .AutoplayVideo
+      position: absolute
+      top: 0
+      left: 0
+
+.YourAccount
+  padding-bottom: $gutter
+  +laptop
+    padding-bottom: $gutter*3
+
+  &__container
+    +container
+
+  &__heading
+    padding-top: $gutter*2.5
+    padding-bottom: $gutter
+    +laptop
+      padding-top: $gutter*6
+      padding-bottom: $gutter*2
+      
+  &__content
+    max-width: 540px + $gutter
+    padding-right: $gutter
+      
+  &__title
+    +title
+  &__subtitle
+    +subtitle
+  &__copy
+    +copy
+
+  &__imagesLeft
+    +laptop
+      width: 36.435%
+      max-width: 375px + 60
+      margin-left: $gutter*2
+      margin-top: -31%
+  &__imagesRight
+    +laptop
+      width: 36.435%
+      max-width: 375px + 60
+      margin-right: $gutter*2
+  &__item
+    margin-bottom: $gutter*2
+    +laptop
+      width: 100%
+      margin-bottom: $gutter*5
+    p
+      +copy-read
+      margin-top: 1em
+      padding-right: $gutter/2
+      +laptop
+        max-width: 345px + $gutter/2
+        margin-top: 2em
+
+  &__images
+    +laptop
+      padding-top: $gutter*2
+      position: relative
+      display: flex
+      flex-direction: row-reverse
+      justify-content: center
+  &__imageWrapper
+    padding: $gutter/2
+    background-color: #f9f9f9
+    +laptop
+      padding: $gutter
+
+.FeelIt
+  // padding-bottom: $gutter
+  background-color: #262626
+  +laptop
+    // padding-bottom: $gutter*3
+
+  &__container
+    +container
+
+  &__heading
+    padding-top: $gutter*2.5
+    padding-bottom: $gutter
+    +laptop
+      padding-top: $gutter*6
+      padding-bottom: $gutter*2
+      
+  &__title
+    +title
+    color: $white
+  &__subtitle
+    +subtitle
+    color: #B2B2B2
+  &__copy
+    +copy
+    max-width: 540px
+    color: $white
+
+  &__rowOne
+    +laptop
+      display: flex
+      flex-wrap: wrap
+      flex-direction: row
+      align-items: flex-end
+      margin-left: -$gutter
+      margin-right: -$gutter
+  &__col1
+    +laptop
+      width: 62%
+      padding: $gutter
+  &__col2
+    // width: 55%
+    +laptop
+      width: 28%
+      padding: $gutter
+  &__imageBlock1
+    // border: 10px solid red
+    // margin-left: -$gutter*3
+    +laptop
+      margin-left: -$gutter*4
+      margin-bottom: $gutter*2
+  &__imageBlock2
+
+  &__rowTwo
+    +laptop
+      display: flex
+      flex-wrap: wrap
+      flex-direction: row
+      margin-left: -$gutter
+      margin-right: -$gutter
+  &__colLeft
+    +laptop
+      width: 45%
+      padding: $gutter
+  &__colRight
+    +laptop
+      width: 53%
+      padding: $gutter
+  // &__col3
+  //   border: 1px sooid red
+  //   +laptop
+  //     // width: 45%
+  //     // padding: $gutter
+  // &__col4
+  //   +laptop
+  //     // width: 53%
+  //     // padding: $gutter
+  &__imageBlock3
+    // margin-top: -$gutter*2
+    // margin-left: $gutter*5
+    +laptop
+      margin-top: -$gutter*2
+      margin-left: $gutter*5
+      margin-bottom: $gutter*2
+  &__imageBlock4
+    // margin-right: $gutter*3
+    +laptop
+      // margin-right: 0
+      margin-left: -$gutter*2
+  &__imageBlock5
+    +laptop
+      margin-bottom: $gutter*2
+  &__imageBlock6
+    +laptop
+      max-width: 362px
+
+  &__rowThree
+    +laptop
+      display: flex
+      flex-wrap: wrap
+      flex-direction: row
+      margin-left: -$gutter
+      margin-right: -$gutter
+  &__col7
+    +laptop
+      width: 100%
+      padding-left: $gutter
+      padding-right: $gutter
+      padding-top: $gutter
+  &__imageBlock7
+    margin-left: -$gutter
+    margin-right: -$gutter
+    +laptop
+      margin-left: $gutter*4
+      margin-right: $gutter*4
+
+.Quote--feelIt
+  // padding-top: $gutter*3
+  // padding-bottom: $gutter*3
+  background-color: $white
+  +laptop
+    // padding-top: $gutter*7
+    // padding-bottom: $gutter*7
+
+.ItsWorking
+  padding-bottom: $gutter
+  +laptop
+    padding-bottom: $gutter*3
+
+  // $root: &;
+
+  &__container
+    +container
+
+  &__heading
+    border-top: 1px solid #ebebeb
+    padding-top: $gutter*2.5
+    padding-bottom: $gutter
+    margin-bottom: $gutter*2
+    +laptop
+      padding-top: $gutter*6
+      padding-bottom: $gutter*2
+      margin-bottom: 0
+      
+  &__title
+    +title
+  &__subtitle
+    +subtitle
+  &__copy
+    +copy
+    max-width: 540px
+
+  &__row
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+  &__col
+    width: 100%
+    margin-bottom: $gutter*4
+    +laptop
+      width: 50%
+      padding: $gutter*2
+      margin-bottom: 0
+
+  &__news
+    font-size: 2.2em
+    margin-top: 0
+    margin-bottom: 1.07143em
+    font-weight: 200
+    font-family: $family-serif
+    // font-style: italic
+    line-height: 1.57143
+    +laptop
+      font-size: 2.8em
+    &::before
+      content: "\201C"
+      margin-left: -.35em
+      margin-right: .1em
+    &::after
+      content: "\201D"
+
+  &__image
+    height: 44px
+    margin-bottom: $gutter
+    .image
+      margin-left: 0
+  &__footer
+    display: flex
+    align-items: center
+
+  &__city
+    flex: 0 1 auto
+    letter-spacing: .025em
+  &__name,
+  &__role
+    font-size: 1.4em
+    line-height: 1.4
+    display: block
+    font-style: normal
+  &__name
+    padding-top: 0.25em
+    font-weight: 500
+  &__role
+    font-weight: 400
+    color: #aeaeae
+
+
+// .AuthenticPhotography
+//   // padding-top: $gutter
+//   // padding-bottom: $gutter
+//   // +laptop
+//   //   padding-top: $gutter*7
+//   //   padding-bottom: $gutter*7
+
+//   &__container
+//     +container
+//   &__heading
+//     border-top: 1px solid #ebebeb
+//     padding-top: $gutter*2.5
+//     // padding-bottom: $gutter
+//     +laptop
+//       border-top: none
+//       padding-top: 0
+//     //   padding-bottom: $gutter*2
+
+//   &__title
+//     +title-sm
+//   &__subtitle
+//     +subtitle-sm
+//   &__copy
+//     +copy-read
+//     max-width: 540px
+//   &__rowImages
+//     margin-left: -$gutter
+//     margin-right: -$gutter
+//   &__images
+//     padding-top: $gutter*2
+//     position: relative
+//     display: flex
+//     justify-content: center
+//   &__imagesLeft
+//     width: 44%
+//     // width: 470px
+//     margin-right: 6%
+//   &__imagesRight
+//     width: 44%
+//     margin-top: -20%
+//     margin-left: 6%
+    
+
+//   &__item
+//     margin-bottom: $gutter*5
+//     width: 100%
+//     p
+//       +copy-read
+//       margin-top: 2em
+//       max-width: 345px
+//   &__imageWrapper
+//     background-color: #F1F5F7
+//     padding: $gutter
+
+//   &__imageFull
+//     margin-top: $gutter*3
+    

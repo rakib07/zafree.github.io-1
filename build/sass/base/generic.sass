@@ -1,0 +1,42 @@
+html
+  background-color: $body-background
+  font-size: $body-size
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  min-width: 320px
+  overflow-x: hidden
+  overflow-y: scroll
+  text-rendering: $body-rendering
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+  height: 100%
+  &.isScrollDisabled
+    body
+      height: 100vh
+      overflow: hidden
+
+body
+  font-family: $body-family
+  color: $body-text
+  font-size: 62.5%
+  font-weight: $body-weight
+  line-height: $body-line-height
+  // overflow-wrap: break-word
+  height: 100%
+
+._kErnel
+  display: block
+  position: relative
+
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section
+  display: block
+  

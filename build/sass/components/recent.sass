@@ -1,0 +1,144 @@
+.Recent
+  position: relative
+  // background-color: #F6F5F7
+  padding-top: 60px
+  padding-bottom: 80px
+  +laptop
+    padding-top: 160px
+    padding-bottom: 160px
+
+  &__container
+    +container
+    // display: flex
+  &__header
+    position: relative
+    +laptop
+      margin-left: 130px
+  
+  &__title
+    +title-sm
+
+  &__subtitle
+    +subtitle-sm
+
+  &__copy
+    +copy
+    display: none
+    +laptop
+      display: block
+      max-width: 540px
+  
+  &__workWrapper
+    margin-top: 30px
+    +laptop
+      margin-top: 80px
+
+    .Gallery
+      &__col
+        width: 77%
+        min-width: 77%
+        &:not(:last-child)
+          margin-right: 20px
+        +laptop
+          width: 40%
+          min-width: 40%
+          &:not(:last-child)
+            margin-right: 50px
+
+
+.WorkItem
+  background-color: $white
+  // &--seeAll
+  //   height: 100%
+  //   position: inline-flex
+  &__imageWrap
+    position: relative
+    // padding-bottom: 125%
+    background-color: #DADBDE
+    margin-bottom: 10px
+    +laptop
+      // padding-bottom: 100%
+      margin-bottom: 30px
+    img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+  &__content
+    display: flex
+    justify-content: center
+    flex-direction: column
+    // align-items: center
+    padding: 0 15px 0 0
+    +laptop
+      padding: 0 15px
+      align-items: center
+      text-align: center
+
+  &__heading
+    +copy
+    color: #252525
+    margin-bottom: 0
+    font-weight: 400
+    
+  &__typelist
+    display: inline-flex
+    max-width: 100%
+    flex-flow: row wrap
+  &__type
+    +copy-sm
+    color: #757575
+    margin-bottom: 0
+    &:not(:last-child)
+      &::after
+        content: ","
+        margin-right: 5px
+
+
+.WorkGrid
+  position: relative
+  padding-top: 10px
+  +laptop
+    padding-top: 60px
+  &__container
+    +container
+  &__row
+    overflow: hidden
+    margin-left: -30px
+    margin-right: -30px 
+    +laptop
+      margin-left: 0
+      margin-right: 0 
+  &__listWrapper
+    display: flex
+    margin-left: -7.5px
+    margin-right: -7.5px
+    +laptop
+      margin-left: -30px
+      margin-right: -30px 
+  &__listLeft
+    width: 50%
+  &__listRight
+    width: 50%
+    padding-top: 24%
+    +laptop
+      padding-top: 20%
+  &__item
+    display: block
+    position: relative
+    // width: 0%
+    padding: 0 7.5px
+    margin-bottom: 30px
+    +laptop
+      padding: 0 30px
+      margin-bottom: 100px
+    
+    .WorkItem__content
+      align-items: center
+      text-align: center
+      padding: 0 15px
+
+    .WorkItem__type
+      display: none
+      +laptop
+        display: block    

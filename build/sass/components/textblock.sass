@@ -1,0 +1,117 @@
+.TextBlock
+  position: relative
+  padding-top: $gutter*2
+  padding-bottom: $gutter*2
+  +laptop
+    padding-top: $gutter*5
+    padding-bottom: $gutter*5
+  &__container
+    +container
+
+  &__row
+    position: relative
+    margin-left: -$gutter/2
+    margin-right: -$gutter/2
+    +laptop
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      align-items: stretch
+      justify-content: flex-start
+
+
+  // colLeft + colRight 
+
+  &__colLeft
+    padding-bottom: 20px
+    padding-left: $gutter/2
+    padding-right: $gutter/2
+    +laptop
+      width: 50%
+      margin-left: 8.33333%
+      order: 2
+      padding-bottom: 0
+
+    h4
+      +label-hero
+    p
+      +copy-hero
+    
+  &__colRight
+    padding-left: $gutter/2
+    padding-right: $gutter/2
+    +laptop
+      width: 16.66667%
+      order: 1
+  &__sideCopy
+    border-top: 1px solid #ebebeb
+    padding-top: 30px
+    +laptop
+      border-top: none
+      padding-top: 0
+    h5
+      font-size: 1.7em
+      letter-spacing: .025em
+      line-height: 1.66667
+      font-weight: 500
+      margin-top: .40832em
+      margin-bottom: 1em
+    p
+      +copy-read
+      line-height: 1.66667
+      margin-top: .40832em
+      font-weight: 400
+
+      a
+        font-weight: 500
+        text-decoration: underline
+
+
+  // single col block 
+
+  &__colBlock
+    padding-left: $gutter/2
+    padding-right: $gutter/2
+    +laptop
+      width: 50%
+      margin-left: 25%
+    h2
+      +title-sm
+    h3
+      +subtitle-sm
+      margin-bottom: 1.13636em
+    h4
+      +label-hero
+    p
+      +copy-hero
+
+    ul
+      list-style: circle outside
+      padding-left: $gutter*.75
+      li
+        font-size: 1.5em
+        letter-spacing: .025em
+        line-height: 1.55556
+        font-weight: 300
+        margin-bottom: 0.25em 
+        +laptop
+          font-size: 2.1em
+
+        a
+          color: #2776ed
+          display: block
+          +laptop
+            display: inline
+    &--isRight
+      +laptop
+        margin-left: auto
+      
+
+.ImageBlock
+  .i1x
+    +laptop
+      display: none
+  .i2x
+    display: none
+    +laptop
+      display: block

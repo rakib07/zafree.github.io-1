@@ -1,0 +1,147 @@
+.Hero
+  position: relative
+  z-index: 10
+  +laptop
+    background-color: #fafafa
+    padding-bottom: 100px
+    margin-top: -130px
+    padding-top: 130px
+  &__container
+    +container
+    +laptop
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+  &__content
+    position: relative
+    padding-top: 10px
+    padding-bottom: 40px
+    +laptop
+      width: 40%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: flex-start
+      padding-top: 0px 
+
+  &__title
+    +title-hero
+    
+  &__subtitle
+    +subtitle-hero
+
+    // +laptop
+    //   margin-bottom: 2em
+    a
+      color: #783392
+    // font-size: 6em
+    // font-family: $family-serif
+    // font-weight: 100
+    // line-height: 1.11538
+    // letter-spacing: -0.035em
+    // color: #8d8f9a
+    // max-width: 850px
+  // &__subtitle
+  //   font-size: 3em
+  //   line-height: 40px
+  //   color: #A9ABAF
+  //   font-family: TensoW00-Light
+  //   // font-family: $family-sans
+  //   // font-weight: 300
+  //   letter-spacing: -0.02em
+  //   max-width: 440px
+  //   margin-top: 20px
+  //   a 
+  //     color: #783392
+  
+  &__button
+    display: none
+    +laptop
+      +button
+      display: black
+      font-size: 1.6em
+      height: 56px
+      // background-color: rgba($black, .03)
+      // margin-top: 2.33438em
+      font-family: $family-sans
+      font-weight: 500
+      letter-spacing: -0.01em
+      color: #252525
+      &::before
+        content: ""
+        display: block
+        position: absolute
+        top: 80%
+        margin: 20px 0 0 3px
+        width: 0
+        height: 0
+        pointer-events: none
+        border: 5px solid transparent
+        border-top-color: rgb(62, 231, 214)
+        left: 0
+      // &::after
+      //   content: ""
+      //   display: block
+      //   position: absolute
+      //   top: 50%
+      //   left: 0
+      //   right: 0
+      //   height: 6px
+      //   margin-top: 2px
+      //   // margin: 20px 0 0 3px
+      //   pointer-events: none
+      //   // border: 5px solid transparent
+      //   background-color: rgba(62, 231, 214, 0.5)
+      //   z-index: -1
+
+
+
+  &__imageWrapper
+    position: relative
+    margin-left: -30px
+    +laptop
+      width: 55%
+      margin-left: 0
+      height: 70%
+
+
+  &__image
+    position: relative
+    width: 100%
+    // padding-bottom: 125%
+    // background-color: #ECA301
+    background-color: rgb(238, 179, 54)
+    +laptop
+      background-color: $white
+    // // img
+    //   position: absolute
+    //   top: 0
+    //   left: 0
+    //   width: 100%
+    //   height: 100%
+    //   z-index: 1
+    //   +laptop
+    //     transform: scaleX(-1)
+  &__imageFollower
+    display: none
+    +laptop
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      // height: 100%
+      // width: 100%
+      height: 1500px
+      width: 1500px
+      border-radius: 50%
+      // background-color: #F6F5F7
+      // background-color: #000
+      margin-top: -50%
+      margin-left: 0
+      // background-color: lighten(#783392, 25%)
+      // background-color: rgb(238, 179, 54)
+      background-color: rgb(62, 231, 214)
+      // background-color: rgb(118, 212, 228)
+      z-index: -1
+

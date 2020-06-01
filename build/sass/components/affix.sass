@@ -1,0 +1,45 @@
+.Affix
+  padding-top: $gutter*2.5
+  padding-bottom: $gutter*2.5
+  // background-color: #f7f9fb
+  background-color: #f9f9f9
+  +laptop
+    background-color: transparent
+    padding-top: $gutter*6
+    padding-bottom: $gutter*6
+
+  // $root: &;
+
+  &__container
+    +container
+  &__inner
+    +laptop
+      display: flex
+      // flex-direction: row-reverse
+      align-items: flex-start
+      justify-content: space-between
+      &--reverse
+        flex-direction: row-reverse
+  &__content
+    padding-bottom: $gutter*1.5
+    +laptop
+      position: sticky
+      top: 0
+      padding-left: 0
+      padding-right: 15px
+      max-width: 520px
+      padding-top: $gutter*4
+  &__title
+    +title
+  &__subtitle
+    +subtitle
+  &__copy
+    +copy
+  &__sideImage
+    +laptop
+      width: 50%
+      // max-width: 570px
+      // max-width: 645px
+      max-width: 520px + $gutter*2
+      background-color: #f9f9f9
+      padding: $gutter

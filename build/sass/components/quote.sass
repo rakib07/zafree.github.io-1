@@ -1,0 +1,60 @@
+.Quote
+  padding-top: $gutter*2.5
+  padding-bottom: $gutter*2.5
+  background-color: #f7f9fb
+  +laptop
+    padding-top: $gutter*5
+    padding-bottom: $gutter*5
+  &--bgWhite
+    background-color: #ffffff
+  &__container
+    +container
+
+  &__inner
+    width: 100%
+    +laptop
+      width: 66.66667%
+      max-width: 630px
+      margin-left: auto
+      margin-right: auto
+
+  &__copy
+    font-size: 2.2em
+    margin-top: 0
+    margin-bottom: 1.07143em
+    font-weight: 300
+    font-style: italic
+    line-height: 1.39286
+    +laptop
+      font-size: 2.8em
+    &::before
+      content: "\201C"
+      margin-left: -.35em
+      margin-right: .1em
+    &::after
+      content: "\201D"
+
+  &__footer
+    display: flex
+    align-items: center
+  &__image
+    width: 56px
+    height: 56px
+    background-color: #4ac5d7
+    border-radius: 50%
+    margin-right: 20px
+  &__city
+    flex: 0 1 auto
+    letter-spacing: .025em
+  &__name,
+  &__role
+    font-size: 1.4em
+    line-height: 1.4
+    display: block
+    font-style: normal
+  &__name
+    padding-top: 0.25em
+    font-weight: 500
+  &__role
+    font-weight: 400
+    color: #aeaeae
