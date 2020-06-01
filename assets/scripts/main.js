@@ -1,8 +1,8 @@
 /**
- * Zafree v1.0.0 - Learn barba.js
- * @link https://zafree.github.io
+ * Zafree v1.0.0 - Personal website
+ * @link https://zafree.github.io/
  * @copyright 2019-2020 Zafree
- * @license MIT
+ * @license Free
  */
 "use strict";
 
