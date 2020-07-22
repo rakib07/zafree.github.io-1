@@ -1,0 +1,492 @@
+.ngBrand
+  padding-top: $gutter*3
+  padding-bottom: $gutter*3
+  +laptop
+    padding-top: $gutter*6
+    padding-bottom: $gutter*6
+  &__container
+    +container
+  &__heading
+    padding-bottom: 30px
+    +laptop
+      padding-bottom: 70px
+  &__title
+    +title
+    max-width: 8.6667em
+  &__subtitle
+    +subtitle
+    max-width: 10.9568em
+    margin-bottom: .6em
+  &__copy
+    +copy
+    max-width: 540px
+
+  // logo block
+  &__logoBlock
+    p
+      +copy-sm
+      padding-left: 15px
+      padding-right: 15px
+      display: block
+      width: 100%
+      margin-top: 1em
+      text-align: center
+  &__row
+    display: flex
+    flex-flow: row wrap
+    margin-left: -$gutter
+    margin-right: -$gutter
+    justify-content: space-around
+    +laptop
+      justify-content: flex-start
+    
+  &__col1
+    width: 120px
+    margin-left: $gutter
+    +laptop
+      width: 186px
+      margin-right: $gutter*4.5
+      margin-left: $gutter*7.7
+  &__col2
+    width: 120px
+    margin-right: $gutter
+    +laptop
+      width: 186px
+      margin-right: 0
+  &__col3
+    width: 100%
+    margin-top: $gutter/2
+    +laptop
+      width: 800px
+      margin-left: $gutter*10.5
+      margin-top: $gutter*2
+
+
+.ngBrandColor
+  // padding-top: $gutter*3
+  padding-bottom: $gutter*3
+  +laptop
+    // padding-top: $gutter*6
+    padding-bottom: $gutter*5
+  &__container
+    +container
+  &__heading
+    padding-bottom: $gutter
+    +laptop
+      padding-bottom: $gutter*3
+  &__title
+    +title
+    max-width: 8.6667em
+  &__subtitle
+    +subtitle
+    max-width: 10.9568em
+    margin-bottom: .6em
+  &__copy
+    +copy
+    max-width: 540px
+
+  // logo block
+  &__logoBlock
+    p
+      +copy-sm
+      padding-left: 15px
+      padding-right: 15px
+      display: block
+      width: 100%
+      margin-top: 1em
+      text-align: center
+  &__row
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-around
+    +laptop
+      justify-content: center
+
+  &__col
+    width: 120px
+    +laptop
+      width: 186px
+      margin-right: ($gutter*4.5)/2
+      margin-left: ($gutter*4.5)/2
+
+.ngTextBlock
+  padding-top: 0
+
+.ngBrandPalette
+  // padding-bottom: $gutter*3
+  // +laptop
+  //   padding-bottom: $gutter*5
+  &__container
+    +container
+  &__inner
+    border-top: 1px solid #ebebeb
+    padding-top: $gutter*2.5
+    margin-top: $gutter
+    +laptop
+      padding-top: $gutter*5
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+  &__content
+    +laptop
+      padding-top: $gutter*3
+  &__title
+    +title
+  &__subtitle
+    +subtitle
+  &__copy
+    +copy
+    max-width: 520px
+  &__sideImage
+    margin-top: $gutter*2
+    +laptop
+      width: 50% 
+      max-width: 500px 
+    p
+      +copy-sm
+      padding-left: 15px
+      padding-right: 15px
+      display: block
+      width: 100%
+      margin-top: 1em
+      text-align: center
+      +laptop
+        margin-top: 2em
+
+  &__pallette
+    +laptop
+      display: flex
+      justify-content: center
+      margin-top: -50px
+    .pallette
+      &__one
+        width: 200px
+        margin-left: auto
+        margin-right: auto
+        margin-top: 80px
+        +laptop
+          width: 230px
+          margin-top: 0px
+        // margin-left: 123px
+      &__two
+        width: 200px
+        margin-left: auto
+        margin-right: auto
+        margin-top: 60px
+        +laptop
+          width: 230px
+          margin-left: 100px
+          margin-right: 100px
+          margin-top: 100px
+      &__color
+        height: 230px
+        +laptop
+          height: 230px
+      &__colorInfo
+        +copy-sm
+        color: rgba(#122A66, .67)
+        margin-top: 20px
+      &__label
+        margin-top: 6px
+        span
+          margin-left: 10px
+          &:first-of-type
+            width: 45px
+            display: inline-block
+            margin-left: 0
+    .color
+      &--D10025
+        background-color: #D10025
+      &--122A66
+        background-color: #122A66
+
+  &__type
+    width: 200px
+    margin-top: 100px
+    margin-left: auto
+    margin-right: auto
+    +laptop
+      width: 273px
+      margin-top: 200px
+      margin-right: 111px
+    .image
+      margin-left: 0
+      .image__aspect-ratio
+        background-color: $white
+
+  &__imageBlock
+    margin-top: $gutter*3
+    background-color: #23252A
+    background-image: linear-gradient($white 50%, #23252A 50%)
+    +laptop
+      margin-top: $gutter*5
+    .image
+      .image__aspect-ratio
+        background-color: transparent
+
+
+.ngTees
+  padding-top: $gutter*2.5
+  padding-bottom: $gutter
+  +laptop
+    padding-top: $gutter*7
+    padding-bottom: $gutter*2
+
+  &__container
+    +container
+
+  &__heading
+    padding-bottom: $gutter
+    +laptop
+      padding-top: $gutter
+      display: flex
+      justify-content: flex-end
+      
+  &__content
+    max-width: 500px + $gutter
+    padding-right: $gutter
+      
+  &__title
+    +title
+    // color: $white
+    // max-width: 440px
+  &__subtitle
+    +subtitle
+    // max-width: 440px
+    // color: #9ea0a6
+  &__copy
+    +copy
+    // color: $white
+
+  &__imagesLeft
+    +laptop
+      width: 51.77%
+      // width: 470px
+      // max-width: 375px + 60
+      margin-right: $gutter*2
+      margin-top: -35%
+  &__imagesRight
+    +laptop
+      width: 51.77%
+      // max-width: 375px + 60
+      margin-left: $gutter*2
+  &__item
+    margin-bottom: $gutter*2
+    +laptop
+      width: 100%
+      margin-bottom: $gutter*5
+    p
+      +copy-read
+      margin-top: 1em
+      padding-right: $gutter/2
+      +laptop
+        max-width: 345px + $gutter/2
+        margin-top: 2em
+
+  &__images
+    +laptop
+      padding-top: $gutter*2
+      position: relative
+      display: flex
+      justify-content: center
+  
+.ngReady
+  background-color: #D7103B
+  padding-top: $gutter*2.5
+  +laptop
+    padding-top: $gutter*6
+  &__container
+    +container
+  &__heading
+    // padding-bottom: $gutter
+    +laptop
+      padding-top: $gutter
+      // padding-bottom: $gutter*2.5
+  &__title
+    +title
+    color: $white
+  &__subtitle
+    +subtitle
+    color: rgba($black,.5)
+  &__copy
+    +copy
+    max-width: 515px
+    color: $white
+
+  &__imageContent
+    // width: 46.745%
+    position: relative
+    // background-color: #D7103B
+    padding-bottom: $gutter*2
+    .image
+      .image__aspect-ratio
+        background-color: transparent
+
+.ngResponsive
+  padding-top: $gutter*2.5
+  background-color: #0B0C12
+  // background-color: #141414
+  +laptop
+    padding-top: $gutter*7
+  &__container
+    +container
+  &__row
+    +laptop
+      display: flex
+  &__heading
+    padding-bottom: $gutter
+    +laptop
+      width: 100% - 46.745
+      padding-top: $gutter
+  &__content
+    +laptop
+      max-width: 560px + $gutter
+      padding-right: $gutter
+      
+  &__title
+    +title
+    color: $white
+  &__subtitle
+    +subtitle
+  &__copy
+    +copy
+    max-width: 515px
+    color: $white
+
+  &__imageContent
+    +laptop
+      width: 48.824%
+      position: relative
+    .image
+      .image__aspect-ratio
+        background-color: transparent
+
+  &__imageWrapper1
+    width: 100%
+    margin-left: auto
+    margin-right: -$gutter*3
+    +laptop
+      width: 100%
+      padding-top: $gutter*2
+      margin-right: 0
+  &__imageWrapper2
+    position: absolute
+    bottom: 0
+    width: 45%
+    +laptop
+      width: 310px
+      transform: translateX(-100%)
+      margin-left: -$gutter*1.5
+    
+.ngTheDay
+  padding-top: $gutter*2.5
+  padding-bottom: $gutter*2.5
+  +laptop
+    padding-top: $gutter*5
+    padding-bottom: $gutter*7
+  &__container
+    +container
+  &__heading
+    padding-bottom: $gutter
+    +laptop
+      padding-top: $gutter
+      padding-bottom: $gutter*2.5
+  &__title
+    +title
+  &__subtitle
+    +subtitle
+  &__copy
+    +copy
+    max-width: 515px
+
+  &__row
+    display: flex
+    flex-flow: row wrap
+    margin-left: -$gutter/2
+    margin-right: -$gutter/2
+    +laptop
+      margin-left: -$gutter
+      margin-right: -$gutter
+      min-height: 100px
+      &.isAlignEnd
+        align-items: flex-end
+
+  &__col1,
+  &__col2,
+  &__col3,
+  &__col4,
+  &__col5,
+  &__col6,
+  &__col7,
+  &__col8
+    padding: $gutter/2
+    +laptop
+      padding: $gutter
+
+  &__col1
+    width: 100%
+    +laptop
+      width: 61.852%
+  &__col2
+    width: 100%
+    +laptop
+      width: 28.223%
+  &__col3
+    width: 100%
+    +laptop
+      width: 33.63%
+      margin-left: $gutter*4.5
+  &__col4
+    width: 100%
+    margin-top: -$gutter/2
+    +laptop
+      flex: 1
+      margin-top: 0
+
+  &__col5,
+  &__col6,
+  &__col7,
+  &__col8
+    margin-top: $gutter/2
+    +laptop
+      margin-top: $gutter
+  &__col5
+    flex: 1
+    padding-right: 5px
+    +laptop
+      padding-right: 10px
+  &__col6
+    width: 59.472%
+    padding-left: 5px
+    +laptop
+      padding-left: 10px
+  &__col7
+    width: 45%
+    padding-right: 5px
+    +laptop
+      width: 30.452%
+      padding-right: 10px
+      
+  &__col8
+    width: 55%
+    padding-left: 5px
+    +laptop
+      width: 36.542%
+      padding-left: 10px
+    
+
+  .ImageBlock1
+    +laptop
+      margin-left: -$gutter*3
+  .ImageBlock2
+    // margin-right: $gutter*3
+  .ImageBlock4
+    margin-right: -$gutter*2
+  .ImageBlock5
+    +laptop
+      margin-left: -18px
+
+  .ImageBlock6
+
+  
+  

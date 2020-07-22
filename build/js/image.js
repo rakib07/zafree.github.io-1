@@ -64,7 +64,7 @@
          window.addEventListener('load', function() {
             var image_large = image.dataset.large,
                 image_alt = image.dataset.alt,
-                image_title = image.dataset.title,
+                // image_title = image.dataset.title,
                 image_origanal = new Image();
             image.appendChild(image_origanal);
             image_origanal.className = 'image__original';
@@ -74,7 +74,7 @@
                 image.classList.add('image--loaded');
                 image.classList.remove('image--loading');
                 image_origanal.alt = image_alt;
-                image_origanal.title = image_title;
+                // image_origanal.title = image_title;
             }
         });
     }
@@ -87,8 +87,8 @@
             imageHeight = image.getAttribute('data-height'),
             imageSmall = image.getAttribute('data-small'),
             imageLarge = image.getAttribute('data-large'),
-            imageAlt = image.getAttribute('data-alt'),
-            imageTitle = image.getAttribute('data-title');
+            imageAlt = image.getAttribute('data-alt');
+            // imageTitle = image.getAttribute('data-title');
 
         // check if dataset has and not empty
         if (imageWidth  !== "" && imageWidth  !== null &&
