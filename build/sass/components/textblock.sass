@@ -105,7 +105,35 @@
     &--isRight
       +laptop
         margin-left: auto
-      
+        
+  // 
+  &__siteLink
+    a
+      font-weight: 500
+      font-size: .75em
+      &:hover
+        color: #2776ed
+
+  &__imageBlock
+    margin-top: $gutter*2.5
+    +laptop
+      margin-top: $gutter*4
+    p
+      +copy-sm
+      padding-left: 15px
+      padding-right: 15px
+      display: block
+      width: 100%
+      margin-top: $gutter*2
+      text-align: center
+  
+  .divider
+    border-top: 1px solid #ebebeb
+    margin-top: $gutter*3.5
+    margin-bottom: $gutter*3
+    +laptop
+      margin-top: $gutter*5
+      margin-bottom: $gutter*4 
 
 .ImageBlock
   .i1x

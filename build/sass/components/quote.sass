@@ -5,8 +5,9 @@
   +laptop
     padding-top: $gutter*5
     padding-bottom: $gutter*5
-  &--bgWhite
-    background-color: #ffffff
+  
+  $root: &
+  
   &__container
     +container
 
@@ -58,3 +59,18 @@
   &__role
     font-weight: 400
     color: #aeaeae
+
+
+  &--bgWhite
+    background-color: #ffffff
+
+  &--ngJamee,
+  &--ngShipu
+    background-color: #23252A
+    #{$root}__copy
+      color: $white
+    #{$root}__image
+      background-color: #525252
+    #{$root}__name
+      color: $white
+  
