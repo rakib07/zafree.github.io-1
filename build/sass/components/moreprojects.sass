@@ -1,0 +1,45 @@
+.MoreProjects
+  position: relative
+  &__container
+    +container
+  &__header
+    padding-top: $gutter*3
+    margin-bottom: $gutter
+    border-top: 1px solid #ebebeb
+    +laptop
+      position: relative
+      display: flex
+      justify-content: space-between
+      padding-top: $gutter*6
+      margin-bottom: $gutter
+  &__title
+    +title
+  &__link
+    +button
+    display: black
+    font-size: 1.5em
+    height: 56px
+    // background-color: rgba($black, .03)
+    // margin-top: 2.33438em
+    font-family: $family-sans
+    font-weight: 500
+    letter-spacing: -0.01em
+    color: #252525
+    margin-top: $gutter/2
+    +laptop
+      font-size: 1.6em
+
+  &__grid
+
+  // &__row
+  //   display: flex
+  //   flex-direction: column
+  //   flex-wrap: wrap
+  //   max-height: 2000px
+  //   background-color: rgba(red, 0.1)
+  //   margin-left: -$gutter
+  //   margin-right: -$gutter
+  // &__col
+  //   width: 50%
+  //   padding: $gutter
+  //   margin-bottom: $gutter*3
