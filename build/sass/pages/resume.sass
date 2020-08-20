@@ -33,9 +33,11 @@
     padding-bottom: 160px
   &__container
     +container1000
-    +laptop
-      display: flex
-      flex-direction: row
+    display: flex
+    flex-direction: row
+    // +laptop
+    //   display: flex
+    //   flex-direction: row
 
   &__skills,
   &__tools,
@@ -48,6 +50,10 @@
       flex: 1
       padding-top: 0
   
+  &__skills
+    width: 65%
+    +laptop
+      width: auto
   &__links,
   &__inspiration
     display: none
