@@ -1,13 +1,15 @@
 .Intro
   position: relative
   padding-top: 60px
-  padding-bottom: 80px
+  padding-bottom: 30px
+  // background-color: #222125
   background-color: #fafafa
   background-image: linear-gradient(#ffffff, #fafafa)
   +laptop
     background-image: none
-    padding-top: 100px
-    padding-bottom: 180px
+    background-color: #222125
+    padding-top: 180px
+    padding-bottom: 200px
   &__container
     +container
     +laptop
@@ -15,12 +17,15 @@
   &__label
     +label-hero
     margin-top: 0
+    +laptop
+      color: $white
   &__heading
     +heading
-    max-width: 680px
+    max-width: 752px
     margin-left: auto
     margin-right: auto
     +laptop
+      color: $white
       text-align: center
 
   .Gallery

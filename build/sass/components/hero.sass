@@ -1,40 +1,64 @@
 .Hero
   position: relative
   z-index: 10
+  height: 100%
   +laptop
-    background-color: #fafafa
-    padding-bottom: 100px
+    // background-color: #fafafa
     margin-top: -130px
     padding-top: 130px
+    min-height: 
   &__container
     +container
     +laptop
       display: flex
       flex-direction: row
       justify-content: space-between
-      align-items: center
+      align-items: flex-end
   &__content
     position: relative
     padding-top: 10px
     padding-bottom: 40px
+    max-width: 480px
     +laptop
-      width: 40%
+      max-width: 800px
       display: flex
       flex-direction: column
       justify-content: center
       align-items: flex-start
-      padding-top: 0px 
+      padding-top: 135px 
+      padding-bottom: 270px
 
   &__title
     +title-hero
     
   &__subtitle
     +subtitle-hero
-
-    // +laptop
-    //   margin-bottom: 2em
-    a
-      color: #783392
+    +laptop
+      margin-bottom: 1.5em
+    .Link
+      position: relative
+      &::after
+        content: ""
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        height: 10px
+        border-radius: 20px
+        background-color: rgba($black, 0.09)
+        margin-bottom: 5px
+        margin-left: 1px
+        +laptop
+          height: 20px
+          margin-bottom: 8px
+      &.deligram
+        color: #783392
+        &::after
+          background-color: rgba(#783392, 0.09)
+      &.miniso
+        color: #EC0127
+        &::after
+          background-color: rgba(#EC0127, 0.07)
     // font-size: 6em
     // font-family: $family-serif
     // font-weight: 100
@@ -60,12 +84,12 @@
     +laptop
       +button
       display: black
-      font-size: 1.6em
+      font-size: 1.8em
       height: 56px
       // background-color: rgba($black, .03)
       // margin-top: 2.33438em
       font-family: $family-sans
-      font-weight: 500
+      font-weight: 400
       letter-spacing: -0.01em
       color: #252525
       &::before
@@ -96,14 +120,23 @@
       //   z-index: -1
 
 
-
+  // &__imageHero
+  //   position: absolute
+  //   bottom: 0
+  //   right: 0
+  //   width: 512px
+  //   // height: 740px
+  //   background-size: cover
+  //   background-position: center
+  //   background-image: url('/assets/images/hero1@2x.png')
   &__imageWrapper
     position: relative
     margin-left: -30px
     +laptop
-      width: 55%
-      margin-left: 0
-      height: 70%
+      width: 512px 
+      // margin-left: 0
+      // height: 70%
+      margin-right: -5%
 
 
   &__image
@@ -113,7 +146,14 @@
     // background-color: #ECA301
     background-color: rgb(238, 179, 54)
     +laptop
-      background-color: $white
+      // position: absolute
+      // right: 0
+      // bottom: 0
+      // width: 512px
+      background-color: transparent
+      z-index: -1
+      .image__aspect-ratio
+        background-color: transparent
     // // img
     //   position: absolute
     //   top: 0
@@ -123,25 +163,25 @@
     //   z-index: 1
     //   +laptop
     //     transform: scaleX(-1)
-  &__imageFollower
-    display: none
-    +laptop
-      display: block
-      position: absolute
-      top: 0
-      left: 0
-      // height: 100%
-      // width: 100%
-      height: 1500px
-      width: 1500px
-      border-radius: 50%
-      // background-color: #F6F5F7
-      // background-color: #000
-      margin-top: -50%
-      margin-left: 0
-      // background-color: lighten(#783392, 25%)
-      // background-color: rgb(238, 179, 54)
-      background-color: rgb(62, 231, 214)
-      // background-color: rgb(118, 212, 228)
-      z-index: -1
+  // &__imageFollower
+  //   display: none
+  //   +laptop
+  //     display: block
+  //     position: absolute
+  //     top: 0
+  //     left: 0
+  //     // height: 100%
+  //     // width: 100%
+  //     height: 1500px
+  //     width: 1500px
+  //     border-radius: 50%
+  //     // background-color: #F6F5F7
+  //     // background-color: #000
+  //     margin-top: -50%
+  //     margin-left: 0
+  //     // background-color: lighten(#783392, 25%)
+  //     // background-color: rgb(238, 179, 54)
+  //     background-color: rgb(62, 231, 214)
+  //     // background-color: rgb(118, 212, 228)
+  //     z-index: -1
 
