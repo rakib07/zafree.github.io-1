@@ -5,8 +5,9 @@
     var flkty = new Flickity( elem, {
       // options
       cellAlign: 'left',
-      freeScroll: true,
+      // freeScroll: true,
       contain: true,
+      cellAlign: 'center',
       // prevNextButtons: false,
       pageDots: false,
       // groupCells: 2,
