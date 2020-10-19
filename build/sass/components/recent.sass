@@ -1,11 +1,11 @@
 .Recent
   position: relative
-  // background-color: #F6F5F7
+  background-color: #F6F5F7
   padding-top: 60px
-  padding-bottom: 80px
+  // padding-bottom: 80px
   +laptop
     padding-top: 160px
-    padding-bottom: 160px
+    // padding-bottom: 160px
 
   &__container
     +container
@@ -27,38 +27,51 @@
     +laptop
       display: block
       max-width: 540px
-  
-  &__workWrapper
-    margin-top: 30px
-    +laptop
-      margin-top: 80px
 
-    .Gallery
-      &__col
-        width: 77%
-        min-width: 77%
-        &:not(:last-child)
-          margin-right: 20px
-        +laptop
-          width: 40%
-          min-width: 40%
-          &:not(:last-child)
-            margin-right: 50px
+  &__flickity
+    position: relative
+    overflow: hidden
+    background: linear-gradient(#f6f5f7 315px, #222125 315px)
+    +tablet
+      background: linear-gradient(#f6f5f7 476px, #222125 476px)
+
+  &__seeallContain
+    position: relative
+    background-color: #222125
+    padding-top: 60px
+    padding-bottom: 70px
+    +tablet
+      padding-top: 100px
+      padding-bottom: 160px
+  &__seeallWrapper
+    display: flex
+    justify-content: flex-end
+  &__seeallButton
+    +button
+    background-color: #82EB3D
+    color: $black
+    height: 48px
+    padding-left: 40px
+    padding-right: 40px
+    font-size: 1.4em
+    border-radius: 100px
+    font-weight: 500
+    text-transform: uppercase
+    margin-left: auto
+    +tablet
+      font-size: 1.6em
+      height: 56px
+      padding-left: 50px
+      padding-right: 50px
 
 
 .WorkItem
+  display: block
   background-color: $white
-  // &--seeAll
-  //   height: 100%
-  //   position: inline-flex
+  // border: 1px solid red
   &__imageWrap
     position: relative
-    // padding-bottom: 125%
     background-color: #DADBDE
-    margin-bottom: 10px
-    +laptop
-      // padding-bottom: 100%
-      margin-bottom: 30px
     img
       position: absolute
       top: 0
@@ -66,20 +79,19 @@
       width: 100%
   &__content
     display: flex
-    justify-content: center
     flex-direction: column
-    // align-items: center
-    padding: 0 15px 0 0
+    padding: 10px 15px 0
     +laptop
-      padding: 0 15px
-      align-items: center
-      text-align: center
+      padding: 30px 40px 15px
+      
 
   &__heading
     +copy
     color: #252525
     margin-bottom: 0
     font-weight: 400
+    +laptop
+      //  margin-bottom: 0.2em
     
   &__typelist
     display: inline-flex
@@ -93,6 +105,11 @@
       &::after
         content: ","
         margin-right: 5px
+  &__cat
+    +copy-xs
+    color: #757575
+    margin-top: 40px
+    display: none
 
 
 .WorkGrid
@@ -111,11 +128,13 @@
       margin-right: 0 
   &__listWrapper
     display: flex
+    flex-flow: row wrap
     margin-left: -$gutter/2
     margin-right: -$gutter/2
     +laptop
       margin-left: -$gutter
       margin-right: -$gutter 
+
   &__listLeft
     width: 50%
   &__listRight
@@ -123,25 +142,29 @@
     padding-top: 24%
     +laptop
       padding-top: 20%
+
   &__item
     display: block
     position: relative
-    // width: 0%
+    width: 100%
+    // width: 50%
     padding-left: $gutter/2
     padding-right: $gutter/2
     margin-bottom: $gutter
     +laptop
+      // width: 33.33333333333%
       padding-left: $gutter
       padding-right: $gutter
-      margin-bottom: $gutter*3
+      margin-bottom: $gutter*2.5
     
     .WorkItem__content
       align-items: center
       text-align: center
       padding-left: $gutter/2
       padding-right: $gutter/2
-
+    .WorkItem__typelist
+      justify-content: center
     .WorkItem__type
       display: none
       +laptop
-        display: block    
+        display: block 

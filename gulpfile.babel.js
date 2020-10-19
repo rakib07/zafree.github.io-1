@@ -32,6 +32,7 @@ var banner = [
 var helpers = [ 
   'build/js/image.js',
   'build/js/modal.js',
+  'build/js/flickity.js',
   'build/js/script.js'
 ];
 
