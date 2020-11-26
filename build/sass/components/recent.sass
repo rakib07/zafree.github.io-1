@@ -64,11 +64,9 @@
       padding-left: 50px
       padding-right: 50px
 
-
 .WorkItem
   display: block
   background-color: $white
-  // border: 1px solid red
   &__imageWrap
     position: relative
     background-color: #DADBDE
@@ -81,9 +79,9 @@
     position: relative
     display: flex
     flex-direction: column
-    padding: 10px 15px 0
+    padding: 20px 25px 15px
     +laptop
-      padding: 30px 40px 15px
+      padding: 30px 40px 20px
 
   &__tag
     position: absolute
@@ -98,8 +96,6 @@
     box-shadow: 0 3px 6px rgba($black, 0.09)
     font-size: 1.5em
     line-height: 1
-    // font-weight: 500
-    // color: $white
     border-radius: 50em
       
 
@@ -126,63 +122,49 @@
   &__cat
     +copy-xs
     color: #757575
-    margin-top: 40px
-    display: none
+    margin-top: 30px
+    +tablet
+      margin-top: 40px
 
 
 .WorkGrid
   position: relative
   padding-top: $gutter/3
+  padding-bottom: $gutter*3
+  background-image: linear-gradient($white 0%, #F6F5F7 250px, #F6F5F7 100%)
   +laptop
     padding-top: $gutter*2
+    padding-bottom: $gutter*4
   &__container
     +container
   &__row
+    position: relative
     overflow: hidden
-    margin-left: -$gutter
-    margin-right: -$gutter
-    +laptop
-      margin-left: 0
-      margin-right: 0 
+  
   &__listWrapper
     display: flex
     flex-flow: row wrap
-    margin-left: -$gutter/2
-    margin-right: -$gutter/2
+    +tablet
+      margin-left: -20px
+      margin-right: -20px
     +laptop
-      margin-left: -$gutter
-      margin-right: -$gutter 
+      margin-left: -22.5px
+      margin-right: -22.5px
 
-  &__listLeft
-    width: 50%
-  &__listRight
-    width: 50%
-    padding-top: 24%
-    +laptop
-      padding-top: 20%
-
+    
+  
   &__item
     display: block
     position: relative
     width: 100%
-    // width: 50%
-    padding-left: $gutter/2
-    padding-right: $gutter/2
-    margin-bottom: $gutter
+    margin-bottom: 40px
+    +tablet
+      width: 50%
+      padding-left: 20px
+      padding-right: 20px
     +laptop
-      // width: 33.33333333333%
-      padding-left: $gutter
-      padding-right: $gutter
-      margin-bottom: $gutter*2.5
+      width: 33.3333333%
+      padding-left: 22.5px
+      padding-right: 22.5px
+      margin-bottom: 60px
     
-    .WorkItem__content
-      align-items: center
-      text-align: center
-      padding-left: $gutter/2
-      padding-right: $gutter/2
-    .WorkItem__typelist
-      justify-content: center
-    .WorkItem__type
-      display: none
-      +laptop
-        display: block 
