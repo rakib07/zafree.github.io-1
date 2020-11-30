@@ -5,7 +5,6 @@ import concat from 'gulp-concat';
 import csscomb from 'gulp-csscomb';
 import csso from 'gulp-csso';
 import header from 'gulp-header';
-import htmlmin from 'gulp-htmlmin';
 import plumber from 'gulp-plumber';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';

@@ -53,10 +53,9 @@
           </svg>
         </a>
         <div class="Navigation">
-          <a class="Navigation__link" href="/">About</a>
           <a class="Navigation__link" href="/work">Work</a>
-          <a class="Navigation__link" href="/resume">Resume</a>
-          <a class="Navigation__link" href="/press">Press</a>
+          <a class="Navigation__link" href="/playground">Playground</a>
+          <a class="Navigation__link" href="/about">About</a>
           <a class="Navigation__link" href="/contact">Contact</a>
         </div>
       </div>
@@ -1088,7 +1087,7 @@
     </main>
     <!-- put here content that will not change
     between your pages, like <footer> -->
-
+    
     <div class="modal" id="navigation">
       <div class="modal__overlay" data-dismiss></div>
       <div class="modal__content">
@@ -1106,14 +1105,21 @@
             <div class="navigation__inner">
               <div class="navigation__main">
                 <nav class="navigation__navigation">
-                  <a class="navigation__navigationLink" href="/">About</a>
+                  <a class="navigation__navigationLink" href="/about">About</a>
                   <a class="navigation__navigationLink" href="/work">Work</a>
-                  <a class="navigation__navigationLink" href="/resume">Resume</a>
-                  <a class="navigation__navigationLink" href="/press">Press</a>
+                  <a class="navigation__navigationLink" href="/playground">Playground</a>
                   <a class="navigation__navigationLink" href="/contact">Contact</a>
                 </nav>
               </div>
               <nav class="navigation__secondaryNavigation">
+                <div class="navigation__secondaryColumn misc">
+                  <h3 class="navigation__secondaryTitle">Misc</h3>
+                  <div class="navigation__secondaryStream">
+                    <div class="navigation__secondaryItem"><a href="#link">Blog</a></div>
+                    <div class="navigation__secondaryItem"><a href="/press">Press</a></div>
+                    <div class="navigation__secondaryItem"><a href="/resume">Resume</a></div>
+                  </div>
+                </div>
                 <div class="navigation__secondaryColumn">
                   <h3 class="navigation__secondaryTitle">Experiments</h3>
                   <div class="navigation__secondaryStream">
@@ -1129,16 +1135,16 @@
                 <div class="navigation__secondaryColumn">
                   <h3 class="navigation__secondaryTitle">Social Links</h3>
                   <div class="navigation__secondaryStream">
-                    <div class="navigation__secondaryItem"><a href="https://dribbble.com/zafree" target="_blank">Dribbble</a></div>
                     <div class="navigation__secondaryItem"><a href="https://github.com/zafree" target="_blank">Github</a></div>
                     <div class="navigation__secondaryItem"><a href="https://codepen.io/zafree" target="_blank">Codepen</a></div>
+                    <div class="navigation__secondaryItem"><a href="https://dribbble.com/zafree" target="_blank">Dribbble</a></div>
                     <div class="navigation__secondaryItem"><a href="https://linkedin.com/in/foysal-zafree-a662118b" target="_blank">LinkedIn</a></div>
                     <div class="navigation__secondaryItem"><a href="https://www.facebook.com/zafree/" target="_blank">Facebook</a></div>
                     <div class="navigation__secondaryItem"><a href="https://twitter.com/foysalzafree" target="_blank">Twitter</a></div>
                     <div class="navigation__secondaryItem"><a href="https://www.instagram.com/foysalzafree/" target="_blank">Instagram</a></div>
                     <div class="navigation__secondaryItem"><a href="https://medium.com/@zafree" target="_blank">Medium</a></div>
-                    <div class="navigation__secondaryItem"><a href="https://500px.com/zafree" target="_blank">500px</a></div>
-                    <div class="navigation__secondaryItem"><a href="https://unsplash.com/@zafree" target="_blank">Unsplash</a></div>
+                    <!-- <div class="navigation__secondaryItem"><a href="https://500px.com/zafree" target="_blank">500px</a></div> -->
+                    <!-- <div class="navigation__secondaryItem"><a href="https://unsplash.com/@zafree" target="_blank">Unsplash</a></div> -->
                   </div>
                 </div>
               </nav>
@@ -1147,6 +1153,7 @@
         </div>
       </div>
     </div>
+
   </div>
   
   <script src="/build/js/barba.umd.js"></script>

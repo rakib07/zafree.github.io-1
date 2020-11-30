@@ -85,7 +85,7 @@ html.isScrollDisabled body {
   overflow: hidden; }
 
 body {
-  font-family: "National 2", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "National 2", sans-serif;
   color: #000;
   font-size: 62.5%;
   font-weight: 400;
@@ -128,7 +128,7 @@ figcaption {
   font-weight: 300;
   margin-bottom: 1em;
   margin-top: 2em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   figcaption {
     font-size: 1.5em; } }
 
@@ -471,7 +471,7 @@ img {
   flex-wrap: wrap;
   pointer-events: none;
   height: 80px; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .Hamburger {
     height: 130px; } }
 .Hamburger__container {
@@ -569,7 +569,7 @@ img {
     margin-right: 30px; }
   .Navigation__link:last-child {
     margin-right: 60px; }
-  .Navigation__link--isActive::before {
+  .Navigation__link.active::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -581,6 +581,7 @@ img {
     background-color: #000; } }
 
 #navigation {
+  min-width: 320px;
   z-index: 100; }
 
 .Header {
@@ -589,7 +590,7 @@ img {
   height: 80px;
   display: flex;
   align-items: center; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .Header {
     height: 130px; } }
 .Header__container {
@@ -622,7 +623,7 @@ img {
   justify-content: flex-start; }
 .Logo__svg {
   height: 14px; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .Logo__svg {
     height: 18px; } }
 
@@ -651,29 +652,24 @@ img {
   align-items: center;
   flex-flow: row wrap;
   justify-content: flex-start; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .navigation__logoWrap {
     height: 130px; } }
-.navigation__row {
-  display: none; }
-@media screen and (min-width: 1080px) {
-  .navigation__row {
-    display: block; } }
 .navigation__inner {
-  padding-top: 60px;
+  padding-top: 30px;
   padding-bottom: 60px;
   display: flex;
   flex-flow: row wrap;
   align-items: stretch;
   justify-content: flex-start; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .navigation__inner {
     padding-top: 60px;
     padding-bottom: 120px; } }
 .navigation__main {
   position: relative;
   width: 100%; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .navigation__main {
     width: 50%; } }
 .navigation__navigation {
@@ -695,13 +691,10 @@ img {
   margin-bottom: 10px;
   padding-top: 5px;
   padding-bottom: 5px; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .navigation__navigationLink {
     font-size: 6em;
     font-weight: 200; } }
-@media screen and (min-width: 1080px) {
-  .navigation__navigationLink {
-    width: 50%; } }
 .navigation__secondaryNavigation {
   width: 100%;
   margin-top: 5em;
@@ -710,34 +703,47 @@ img {
   align-items: stretch;
   justify-content: flex-start;
   flex-direction: row; }
+@media screen and (min-width: 720px) {
+  .navigation__secondaryNavigation {
+    width: 50%; } }
 @media screen and (min-width: 1080px) {
   .navigation__secondaryNavigation {
-    margin-top: 2em;
-    margin-left: 8.33333%;
-    width: 41.66667%; } }
+    margin-top: 2em; } }
 .navigation__secondaryColumn {
   align-self: stretch;
   margin-bottom: 3em;
-  width: 50%;
-  max-width: 220px; }
+  width: 50%; }
+@media screen and (min-width: 1080px) {
+  .navigation__secondaryColumn {
+    width: 33.33333%; } }
+.navigation__secondaryColumn.misc {
+  width: 100%;
+  margin-bottom: 70px; }
+@media screen and (min-width: 1080px) {
+  .navigation__secondaryColumn.misc {
+    width: 33.33333%;
+    max-width: 190px; } }
+.navigation__secondaryColumn.misc a:hover {
+  color: inherit;
+  text-decoration: none; }
 .navigation__secondaryTitle {
   font-size: 1.7em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 400;
   margin-bottom: 1em;
   color: #757575; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .navigation__secondaryTitle {
     font-size: 1.8em; } }
 .navigation__secondaryItem {
   font-size: 1.7em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 400;
   margin-bottom: 1em;
   line-height: 1.11; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .navigation__secondaryItem {
     font-size: 1.8em; } }
 .navigation__secondaryItem a:hover {
@@ -796,7 +802,7 @@ img {
   line-height: 1.11538;
   letter-spacing: -.025em;
   margin-bottom: .09615em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .Hero__title {
     font-size: 6em;
     font-weight: 200; } }
@@ -808,7 +814,7 @@ img {
   letter-spacing: -.035em;
   color: #8d8f9a;
   margin-bottom: .5em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .Hero__subtitle {
     font-size: 6em;
     font-weight: 100; } }
@@ -866,7 +872,7 @@ img {
     display: black;
     font-size: 1.8em;
     height: 56px;
-    font-family: "National 2", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: "National 2", sans-serif;
     font-weight: 400;
     letter-spacing: -.01em;
     color: #252525; }
@@ -936,13 +942,13 @@ img {
     text-align: center; } }
 .Intro__label {
   font-size: 1.9em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 500;
   margin-top: 2.08333em;
   margin-bottom: .83333em;
   margin-top: 0; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .Intro__label {
     font-size: 2.4em; } }
 @media screen and (min-width: 1080px) {
@@ -957,7 +963,7 @@ img {
   max-width: 752px;
   margin-left: auto;
   margin-right: auto; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .Intro__heading {
     font-size: 3.2em;
     font-weight: 200; } }
@@ -1002,7 +1008,7 @@ img {
   line-height: 1.11538;
   letter-spacing: -.025em;
   margin-bottom: .09615em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .Recent__title {
     font-size: 6em;
     font-weight: 200; } }
@@ -1014,18 +1020,18 @@ img {
   letter-spacing: -.035em;
   color: #8d8f9a;
   margin-bottom: .5em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .Recent__subtitle {
     font-size: 6em;
     font-weight: 100; } }
 .Recent__copy {
   font-size: 1.8em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em;
   display: none; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .Recent__copy {
     font-size: 2em; } }
 @media screen and (min-width: 1080px) {
@@ -1125,14 +1131,14 @@ img {
   border-radius: 50em; }
 .WorkItem__heading {
   font-size: 1.8em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em;
   color: #252525;
   margin-bottom: 0;
   font-weight: 400; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .WorkItem__heading {
     font-size: 2em; } }
 .WorkItem__typelist {
@@ -1147,7 +1153,7 @@ img {
   margin-bottom: 1em;
   color: #757575;
   margin-bottom: 0; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .WorkItem__type {
     font-size: 1.5em; } }
 .WorkItem__type:not(:last-child)::after {
@@ -1161,7 +1167,7 @@ img {
   margin-bottom: 1em;
   color: #757575;
   margin-top: 30px; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .WorkItem__cat {
     font-size: 1.3em; } }
 @media screen and (min-width: 720px) {
@@ -1264,8 +1270,9 @@ img {
   font-weight: 300;
   line-height: 1.11538;
   letter-spacing: -.025em;
-  margin-bottom: .09615em; }
-@media screen and (min-width: 1080px) {
+  margin-bottom: .09615em;
+  max-width: 1080px; }
+@media screen and (min-width: 720px) {
   .Herocase__title {
     font-size: 6em;
     font-weight: 200; } }
@@ -1276,22 +1283,28 @@ img {
   line-height: 1.11538;
   letter-spacing: -.035em;
   color: #8d8f9a;
-  margin-bottom: .5em; }
-@media screen and (min-width: 1080px) {
+  margin-bottom: .5em;
+  max-width: 1080px; }
+@media screen and (min-width: 720px) {
   .Herocase__subtitle {
     font-size: 6em;
     font-weight: 100; } }
 .Herocase__copy {
   font-size: 1.8em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em;
   max-width: 36em;
   font-weight: 400; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .Herocase__copy {
     font-size: 2em; } }
+.Herocase + .Separator {
+  margin-top: 40px; }
+@media screen and (min-width: 1080px) {
+  .Herocase + .Separator {
+    margin-top: 80px; } }
 
 .TextBlock {
   position: relative;
@@ -1341,21 +1354,21 @@ img {
     padding-bottom: 0; } }
 .TextBlock__colLeft h4 {
   font-size: 1.9em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 500;
   margin-top: 2.08333em;
   margin-bottom: .83333em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .TextBlock__colLeft h4 {
     font-size: 2.4em; } }
 .TextBlock__colLeft p {
   font-size: 1.9em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .TextBlock__colLeft p {
     font-size: 2.4em; } }
 .TextBlock__colRight {
@@ -1381,14 +1394,14 @@ img {
   margin-bottom: 1em; }
 .TextBlock__sideCopy p {
   font-size: 1.7em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 400;
   margin-bottom: 1em;
   line-height: 1.66667;
   margin-top: .40832em;
   font-weight: 400; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .TextBlock__sideCopy p {
     font-size: 1.8em; } }
 .TextBlock__sideCopy p a {
@@ -1408,7 +1421,7 @@ img {
   line-height: 1.11538;
   letter-spacing: -.025em;
   margin-bottom: .09615em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .TextBlock__colBlock h2 {
     font-size: 5.2em;
     font-weight: 200; } }
@@ -1421,27 +1434,27 @@ img {
   color: #8d8f9a;
   margin-bottom: .5em;
   margin-bottom: 1.13636em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .TextBlock__colBlock h3 {
     font-size: 5.2em;
     font-weight: 100; } }
 .TextBlock__colBlock h4 {
   font-size: 1.9em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 500;
   margin-top: 2.08333em;
   margin-bottom: .83333em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .TextBlock__colBlock h4 {
     font-size: 2.4em; } }
 .TextBlock__colBlock p {
   font-size: 1.9em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .TextBlock__colBlock p {
     font-size: 2.4em; } }
 .TextBlock__colBlock p a:hover {
@@ -1490,7 +1503,7 @@ img {
   width: 100%;
   margin-top: 60px;
   text-align: center; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .TextBlock__imageBlock p {
     font-size: 1.5em; } }
 .TextBlock .divider {
@@ -1651,7 +1664,7 @@ a.Quote__name:hover {
   line-height: 1.11538;
   letter-spacing: -.025em;
   margin-bottom: .09615em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .Affix__title {
     font-size: 5.6em;
     font-weight: 200; } }
@@ -1663,17 +1676,17 @@ a.Quote__name:hover {
   letter-spacing: -.035em;
   color: #8d8f9a;
   margin-bottom: .5em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .Affix__subtitle {
     font-size: 5.6em;
     font-weight: 100; } }
 .Affix__copy {
   font-size: 1.8em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .Affix__copy {
     font-size: 2em; } }
 @media screen and (min-width: 1080px) {
@@ -1722,7 +1735,7 @@ a.Quote__name:hover {
   line-height: 1.11538;
   letter-spacing: -.025em;
   margin-bottom: .09615em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .MoreProjects__title {
     font-size: 5.6em;
     font-weight: 200; } }
@@ -1749,7 +1762,7 @@ a.Quote__name:hover {
   display: black;
   font-size: 1.5em;
   height: 56px;
-  font-family: "National 2", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "National 2", sans-serif;
   font-weight: 500;
   letter-spacing: -.01em;
   color: #252525;
@@ -1759,6 +1772,145 @@ a.Quote__name:hover {
 @media screen and (min-width: 1080px) {
   .MoreProjects__link {
     font-size: 1.6em; } }
+
+.Collage {
+  position: relative;
+  overflow: hidden; }
+.Collage__container {
+  position: relative;
+  min-height: 1px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px; }
+@media screen and (min-width: 720px) {
+  .Collage__container {
+    max-width: 1390px;
+    padding-right: 50px;
+    padding-left: 50px; } }
+@media screen and (min-width: 1080px) {
+  .Collage__container {
+    max-width: 1430px;
+    padding-right: 70px;
+    padding-left: 70px; } }
+.Collage__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center; }
+.Collage__item {
+  background-color: rgba(255, 0, 0, .1); }
+.Collage__item:not(:first-child) {
+  margin-left: 15px; }
+@media screen and (min-width: 1080px) {
+  .Collage__item:not(:first-child) {
+    margin-left: 30px; } }
+.Collage__item.i1 {
+  min-width: 140px; }
+@media screen and (min-width: 1080px) {
+  .Collage__item.i1 {
+    min-width: 410px; } }
+.Collage__item.i2 {
+  min-width: 110px; }
+@media screen and (min-width: 1080px) {
+  .Collage__item.i2 {
+    min-width: 300px; } }
+.Collage__item.i3 {
+  min-width: 110px; }
+@media screen and (min-width: 1080px) {
+  .Collage__item.i3 {
+    min-width: 300px; } }
+.Collage__item.i4 {
+  min-width: 60px; }
+@media screen and (min-width: 1080px) {
+  .Collage__item.i4 {
+    min-width: 190px; } }
+.Collage__item.i5 {
+  min-width: 120px; }
+@media screen and (min-width: 1080px) {
+  .Collage__item.i5 {
+    min-width: 370px; } }
+
+.Separator {
+  position: relative;
+  min-height: 1px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px; }
+@media screen and (min-width: 720px) {
+  .Separator {
+    max-width: 1090px;
+    padding-right: 50px;
+    padding-left: 50px; } }
+@media screen and (min-width: 1080px) {
+  .Separator {
+    max-width: 1130px;
+    padding-right: 70px;
+    padding-left: 70px; } }
+.Separator__separator {
+  width: 100%;
+  height: 1px;
+  border: 0;
+  background: #c8c8c8; }
+
+.Content {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px; }
+@media screen and (min-width: 1080px) {
+  .Content {
+    padding-top: 160px;
+    padding-bottom: 160px; } }
+.Content__container {
+  position: relative;
+  min-height: 1px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px; }
+@media screen and (min-width: 720px) {
+  .Content__container {
+    max-width: 1090px;
+    padding-right: 50px;
+    padding-left: 50px; } }
+@media screen and (min-width: 1080px) {
+  .Content__container {
+    max-width: 1130px;
+    padding-right: 70px;
+    padding-left: 70px; } }
+.Content__row {
+  position: relative; }
+.Content__wrap {
+  margin-top: 50px; }
+@media screen and (min-width: 1080px) {
+  .Content__wrap {
+    margin-top: 80px; } }
+.Content__heading {
+  font-size: 1.9em;
+  line-height: 1.44759;
+  font-weight: 500;
+  letter-spacing: -.01em;
+  max-width: 520px; }
+@media screen and (min-width: 720px) {
+  .Content__heading {
+    max-width: 720px;
+    font-size: 3.2em; } }
+.Content__copy {
+  font-size: 1.9em;
+  letter-spacing: -.01em;
+  line-height: 1.55556;
+  font-weight: 400;
+  max-width: 520px; }
+@media screen and (min-width: 720px) {
+  .Content__copy {
+    font-size: 2.4em;
+    max-width: 720px; } }
+.Content__copy p {
+  margin-top: 1.28333em; }
 
 .ResumeHero {
   position: relative;
@@ -1792,7 +1944,7 @@ a.Quote__name:hover {
   line-height: 1.11538;
   letter-spacing: -.025em;
   margin-bottom: .09615em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ResumeHero__title {
     font-size: 6em;
     font-weight: 200; } }
@@ -1804,19 +1956,19 @@ a.Quote__name:hover {
   letter-spacing: -.035em;
   color: #8d8f9a;
   margin-bottom: .5em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ResumeHero__subtitle {
     font-size: 6em;
     font-weight: 100; } }
 .ResumeHero .mail, .ResumeHero .phone {
   color: #aeaeae;
   font-size: 1.7em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 400;
   margin-bottom: 1em;
   margin-bottom: 0; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ResumeHero .mail, .ResumeHero .phone {
     font-size: 1.8em; } }
 @media screen and (min-width: 1080px) {
@@ -1872,12 +2024,12 @@ a.Quote__name:hover {
     max-width: 188px; } }
 .ResumeLink__title {
   font-size: 1.7em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 400;
   margin-bottom: 1em;
   color: #757575; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ResumeLink__title {
     font-size: 1.8em; } }
 .ResumeLink__stream {
@@ -1887,12 +2039,12 @@ a.Quote__name:hover {
     margin-top: 40px; } }
 .ResumeLink__item {
   font-size: 1.7em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 400;
   margin-bottom: 1em;
   line-height: 1.11; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ResumeLink__item {
     font-size: 1.8em; } }
 .ResumeLink__item a:hover {
@@ -1939,7 +2091,7 @@ a.Quote__name:hover {
 .ResumeExperience__label {
   font-size: 2.5em;
   line-height: 1;
-  font-family: "National 2", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "National 2", sans-serif;
   color: #000;
   font-weight: 500; }
 @media screen and (min-width: 1080px) {
@@ -1962,7 +2114,7 @@ a.Quote__name:hover {
     margin-top: 120px; } }
 .ResumeExperience__no {
   font-size: 36px;
-  font-family: "National 2", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "National 2", sans-serif;
   font-weight: 500;
   line-height: 1;
   letter-spacing: .016em;
@@ -1984,7 +2136,7 @@ a.Quote__name:hover {
   line-height: 1.11538;
   letter-spacing: -.025em;
   margin-bottom: .09615em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ResumeExperience__title {
     font-size: 5.6em;
     font-weight: 200; } }
@@ -1996,17 +2148,17 @@ a.Quote__name:hover {
   letter-spacing: -.035em;
   color: #8d8f9a;
   margin-bottom: .5em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ResumeExperience__subtitle {
     font-size: 5.6em;
     font-weight: 100; } }
 .ResumeExperience__desc {
   font-size: 1.8em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ResumeExperience__desc {
     font-size: 2em; } }
 @media screen and (min-width: 1080px) {
@@ -2015,24 +2167,24 @@ a.Quote__name:hover {
     display: block; } }
 .ResumeExperience__innerLabel {
   font-size: 1.7em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 400;
   margin-bottom: 1em;
   font-weight: 500;
   margin-top: 1.5em;
   margin-bottom: 0; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ResumeExperience__innerLabel {
     font-size: 1.8em; } }
 .ResumeExperience__time {
   font-size: 1.7em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 400;
   margin-bottom: 1em;
   color: #757575; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ResumeExperience__time {
     font-size: 1.8em; } }
 .ResumeExperience .carousel {
@@ -2084,7 +2236,7 @@ a.Quote__name:hover {
 .ResumeEducation__label {
   font-size: 1.9em;
   line-height: 1;
-  font-family: "National 2", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "National 2", sans-serif;
   font-weight: 500;
   color: #ddd;
   margin-bottom: 30px;
@@ -2155,7 +2307,7 @@ a.Quote__name:hover {
   line-height: 1.11538;
   letter-spacing: -.025em;
   margin-bottom: .09615em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .Contact__colBlock h2 {
     font-size: 6em;
     font-weight: 200; } }
@@ -2168,27 +2320,27 @@ a.Quote__name:hover {
   color: #8d8f9a;
   margin-bottom: .5em;
   margin-bottom: 1em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .Contact__colBlock h3 {
     font-size: 6em;
     font-weight: 100; } }
 .Contact__colBlock h4 {
   font-size: 1.9em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 500;
   margin-top: 2.08333em;
   margin-bottom: .83333em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .Contact__colBlock h4 {
     font-size: 2.4em; } }
 .Contact__colBlock p {
   font-size: 1.9em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .Contact__colBlock p {
     font-size: 2.4em; } }
 .Contact__colBlock ul {
@@ -2196,12 +2348,12 @@ a.Quote__name:hover {
   padding-left: 22.5px; }
 .Contact__colBlock ul li {
   font-size: 1.9em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em;
   margin-bottom: .25em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .Contact__colBlock ul li {
     font-size: 2.4em; } }
 .Contact__colBlock ul li a {
@@ -2211,156 +2363,20 @@ a.Quote__name:hover {
   .Contact__colBlock ul li a {
     display: inline; } }
 
-.Press {
+.PressDownloadImage {
   position: relative;
-  padding-top: 60px;
-  padding-bottom: 60px; }
-@media screen and (min-width: 1080px) {
-  .Press {
-    padding-top: 150px;
-    padding-bottom: 150px; } }
-.Press__container {
-  position: relative;
-  min-height: 1px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 30px;
-  padding-left: 30px; }
-@media screen and (min-width: 720px) {
-  .Press__container {
-    max-width: 1390px;
-    padding-right: 50px;
-    padding-left: 50px; } }
-@media screen and (min-width: 1080px) {
-  .Press__container {
-    max-width: 1430px;
-    padding-right: 70px;
-    padding-left: 70px; } }
-.Press__row {
-  position: relative;
+  overflow: hidden; }
+.PressDownloadImage__inner {
+  display: flex;
+  flex-flow: row wrap;
   margin-left: -15px;
   margin-right: -15px; }
-@media screen and (min-width: 1080px) {
-  .Press__row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: flex-start; } }
-.Press__colBlock {
+.PressDownloadImage__col {
+  width: 33.3333%;
   padding-left: 15px;
   padding-right: 15px; }
-@media screen and (min-width: 1080px) {
-  .Press__colBlock {
-    width: 50%;
-    margin-left: 25%; } }
-.Press__colBlock h2 {
-  font-size: 3.6em;
-  font-family: "IBM Plex Serif", Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 300;
-  line-height: 1.11538;
-  letter-spacing: -.025em;
-  margin-bottom: .09615em; }
-@media screen and (min-width: 1080px) {
-  .Press__colBlock h2 {
-    font-size: 6em;
-    font-weight: 200; } }
-.Press__colBlock h3 {
-  font-size: 3.6em;
-  font-family: "IBM Plex Serif", Georgia, Cambria, "Times New Roman", Times, serif;
-  font-weight: 200;
-  line-height: 1.11538;
-  letter-spacing: -.035em;
-  color: #8d8f9a;
-  margin-bottom: .5em;
-  margin-bottom: 1em; }
-@media screen and (min-width: 1080px) {
-  .Press__colBlock h3 {
-    font-size: 6em;
-    font-weight: 100; } }
-.Press__colBlock h4 {
-  font-size: 1.9em;
-  letter-spacing: .025em;
-  line-height: 1.55556;
-  font-weight: 500;
-  margin-top: 2.08333em;
-  margin-bottom: .83333em; }
-@media screen and (min-width: 1080px) {
-  .Press__colBlock h4 {
-    font-size: 2.4em; } }
-.Press__colBlock p {
-  font-size: 1.9em;
-  letter-spacing: .025em;
-  line-height: 1.55556;
-  font-weight: 300;
-  margin-bottom: 1em; }
-@media screen and (min-width: 1080px) {
-  .Press__colBlock p {
-    font-size: 2.4em; } }
-.Press__colBlock ul {
-  list-style: circle outside;
-  padding-left: 22.5px; }
-.Press__colBlock ul li {
-  font-size: 1.5em;
-  letter-spacing: .025em;
-  line-height: 1.55556;
-  font-weight: 300;
-  margin-bottom: .25em; }
-@media screen and (min-width: 1080px) {
-  .Press__colBlock ul li {
-    font-size: 2.1em; } }
-.Press__colBlock ul li a {
-  color: #2776ed;
-  display: block; }
-@media screen and (min-width: 1080px) {
-  .Press__colBlock ul li a {
-    display: inline; } }
-
-.PressImage {
-  padding-bottom: 60px;
-  border-bottom: 1px solid #ebebeb; }
-@media screen and (min-width: 1080px) {
-  .PressImage__row {
-    display: flex;
-    flex-flow: row wrap; } }
-@media screen and (min-width: 1080px) {
-  .PressImage__colLeft {
-    width: 50%;
-    padding-right: 15px; } }
-@media screen and (min-width: 1080px) {
-  .PressImage__colRight {
-    width: 50%;
-    padding-left: 15px; } }
-.PressImage__image1 {
-  margin-bottom: 15px; }
-@media screen and (min-width: 1080px) {
-  .PressImage__image1 {
-    width: 100%;
-    margin-bottom: 30px; } }
-.PressImage__image2 {
-  margin-top: 15px; }
-@media screen and (min-width: 1080px) {
-  .PressImage__image2 {
-    width: 90%;
-    margin-top: 30px; } }
-.PressImage__image3 {
-  margin-top: 15px; }
-@media screen and (min-width: 1080px) {
-  .PressImage__image3 {
-    width: 67%;
-    margin-top: 0; } }
-.PressImage__image4 {
-  margin-top: 15px; }
-@media screen and (min-width: 1080px) {
-  .PressImage__image4 {
-    width: 72%;
-    margin-top: 30px;
-    margin-left: auto; } }
-.PressImage__image5 {
-  margin-top: 15px; }
-@media screen and (min-width: 1080px) {
-  .PressImage__image5 {
-    margin-top: 30px; } }
+.PressDownloadImage__item {
+  margin-bottom: 30px; }
 
 .DeligramBrand {
   padding-top: 90px;
@@ -2399,7 +2415,7 @@ a.Quote__name:hover {
   letter-spacing: -.025em;
   margin-bottom: .09615em;
   max-width: 8.6667em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .DeligramBrand__title {
     font-size: 5.6em;
     font-weight: 200; } }
@@ -2413,18 +2429,18 @@ a.Quote__name:hover {
   margin-bottom: .5em;
   max-width: 10.9568em;
   margin-bottom: .6em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .DeligramBrand__subtitle {
     font-size: 5.6em;
     font-weight: 100; } }
 .DeligramBrand__copy {
   font-size: 1.8em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em;
   max-width: 540px; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .DeligramBrand__copy {
     font-size: 2em; } }
 .DeligramBrand__logoBlock .LogoBlock__row {
@@ -2538,7 +2554,7 @@ a.Quote__name:hover {
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .DeligramBrand__pallette .Pallette__color::before, .DeligramBrand__pallette .Pallette__colorsm::before {
     font-size: 1.5em; } }
 .DeligramBrand__pallette .Pallette__color {
@@ -2567,7 +2583,7 @@ a.Quote__name:hover {
   width: 100%;
   margin-top: 1em;
   text-align: center; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .DeligramBrand__pallette p {
     font-size: 1.5em; } }
 .DeligramBrand__pallette .color--783392 {
@@ -2633,7 +2649,7 @@ a.Quote__name:hover {
   letter-spacing: -.025em;
   margin-bottom: .09615em;
   color: #fff; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .LetsStart__title {
     font-size: 5.6em;
     font-weight: 200; } }
@@ -2648,20 +2664,20 @@ a.Quote__name:hover {
   margin-bottom: .5em;
   color: #b2b2b2;
   margin-bottom: .6em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .LetsStart__subtitle {
     font-size: 5.6em;
     font-weight: 100; } }
 
 .LetsStart__copy {
   font-size: 1.8em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em;
   color: #fff;
   max-width: 520px; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .LetsStart__copy {
     font-size: 2em; } }
 
@@ -2732,7 +2748,7 @@ a.Quote__name:hover {
   line-height: 1.11538;
   letter-spacing: -.025em;
   margin-bottom: .09615em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .DeligramIcon__title {
     font-size: 5.2em;
     font-weight: 200; } }
@@ -2745,18 +2761,18 @@ a.Quote__name:hover {
   color: #8d8f9a;
   margin-bottom: .5em;
   margin-bottom: .6em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .DeligramIcon__subtitle {
     font-size: 5.2em;
     font-weight: 100; } }
 .DeligramIcon__copy {
   font-size: 1.8em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em;
   max-width: 520px; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .DeligramIcon__copy {
     font-size: 2em; } }
 @media screen and (min-width: 1080px) {
@@ -2782,7 +2798,7 @@ a.Quote__name:hover {
   margin-bottom: 1em;
   color: #757575;
   margin-top: 1em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .DeligramIcon__item p {
     font-size: 1.5em; } }
 @media screen and (min-width: 1080px) {
@@ -2828,7 +2844,7 @@ a.Quote__name:hover {
   line-height: 1.11538;
   letter-spacing: -.025em;
   margin-bottom: .09615em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .Pick__title {
     font-size: 5.6em;
     font-weight: 200; } }
@@ -2840,17 +2856,17 @@ a.Quote__name:hover {
   letter-spacing: -.035em;
   color: #8d8f9a;
   margin-bottom: .5em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .Pick__subtitle {
     font-size: 5.6em;
     font-weight: 100; } }
 .Pick__copy {
   font-size: 1.8em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .Pick__copy {
     font-size: 2em; } }
 @media screen and (min-width: 1080px) {
@@ -2872,13 +2888,13 @@ a.Quote__name:hover {
     margin-bottom: 150px; } }
 .Pick__item p {
   font-size: 1.7em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 400;
   margin-bottom: 1em;
   margin-top: 1em;
   padding-right: 15px; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .Pick__item p {
     font-size: 1.8em; } }
 @media screen and (min-width: 1080px) {
@@ -2949,7 +2965,7 @@ a.Quote__name:hover {
   letter-spacing: -.025em;
   margin-bottom: .09615em;
   max-width: 440px; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .NoDistraction__title {
     font-size: 5.6em;
     font-weight: 200; } }
@@ -2962,17 +2978,17 @@ a.Quote__name:hover {
   color: #8d8f9a;
   margin-bottom: .5em;
   max-width: 440px; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .NoDistraction__subtitle {
     font-size: 5.6em;
     font-weight: 100; } }
 .NoDistraction__copy {
   font-size: 1.8em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .NoDistraction__copy {
     font-size: 2em; } }
 @media screen and (min-width: 1080px) {
@@ -2994,13 +3010,13 @@ a.Quote__name:hover {
     margin-bottom: 150px; } }
 .NoDistraction__item p {
   font-size: 1.7em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 400;
   margin-bottom: 1em;
   margin-top: 1em;
   padding-right: 15px; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .NoDistraction__item p {
     font-size: 1.8em; } }
 @media screen and (min-width: 1080px) {
@@ -3067,7 +3083,7 @@ a.Quote__name:hover {
   line-height: 1.11538;
   letter-spacing: -.025em;
   margin-bottom: .09615em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .YourAccount__title {
     font-size: 5.6em;
     font-weight: 200; } }
@@ -3079,17 +3095,17 @@ a.Quote__name:hover {
   letter-spacing: -.035em;
   color: #8d8f9a;
   margin-bottom: .5em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .YourAccount__subtitle {
     font-size: 5.6em;
     font-weight: 100; } }
 .YourAccount__copy {
   font-size: 1.8em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .YourAccount__copy {
     font-size: 2em; } }
 @media screen and (min-width: 1080px) {
@@ -3111,13 +3127,13 @@ a.Quote__name:hover {
     margin-bottom: 150px; } }
 .YourAccount__item p {
   font-size: 1.7em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 400;
   margin-bottom: 1em;
   margin-top: 1em;
   padding-right: 15px; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .YourAccount__item p {
     font-size: 1.8em; } }
 @media screen and (min-width: 1080px) {
@@ -3172,7 +3188,7 @@ a.Quote__name:hover {
   letter-spacing: -.025em;
   margin-bottom: .09615em;
   color: #fff; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .FeelIt__title {
     font-size: 5.6em;
     font-weight: 200; } }
@@ -3185,19 +3201,19 @@ a.Quote__name:hover {
   color: #8d8f9a;
   margin-bottom: .5em;
   color: #b2b2b2; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .FeelIt__subtitle {
     font-size: 5.6em;
     font-weight: 100; } }
 .FeelIt__copy {
   font-size: 1.8em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em;
   max-width: 540px;
   color: #fff; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .FeelIt__copy {
     font-size: 2em; } }
 @media screen and (min-width: 1080px) {
@@ -3313,7 +3329,7 @@ a.Quote__name:hover {
   line-height: 1.11538;
   letter-spacing: -.025em;
   margin-bottom: .09615em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ItsWorking__title {
     font-size: 5.6em;
     font-weight: 200; } }
@@ -3326,19 +3342,19 @@ a.Quote__name:hover {
   letter-spacing: -.035em;
   color: #8d8f9a;
   margin-bottom: .5em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ItsWorking__subtitle {
     font-size: 5.6em;
     font-weight: 100; } }
 
 .ItsWorking__copy {
   font-size: 1.8em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em;
   max-width: 540px; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ItsWorking__copy {
     font-size: 2em; } }
 
@@ -3438,7 +3454,7 @@ a.Quote__name:hover {
   letter-spacing: -.025em;
   margin-bottom: .09615em;
   max-width: 8.6667em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngBrand__title {
     font-size: 5.6em;
     font-weight: 200; } }
@@ -3452,18 +3468,18 @@ a.Quote__name:hover {
   margin-bottom: .5em;
   max-width: 10.9568em;
   margin-bottom: .6em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngBrand__subtitle {
     font-size: 5.6em;
     font-weight: 100; } }
 .ngBrand__copy {
   font-size: 1.8em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em;
   max-width: 540px; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngBrand__copy {
     font-size: 2em; } }
 .ngBrand__logoBlock p {
@@ -3478,7 +3494,7 @@ a.Quote__name:hover {
   width: 100%;
   margin-top: 1em;
   text-align: center; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngBrand__logoBlock p {
     font-size: 1.5em; } }
 .ngBrand__row {
@@ -3549,7 +3565,7 @@ a.Quote__name:hover {
   letter-spacing: -.025em;
   margin-bottom: .09615em;
   max-width: 8.6667em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngBrandColor__title {
     font-size: 5.6em;
     font-weight: 200; } }
@@ -3563,18 +3579,18 @@ a.Quote__name:hover {
   margin-bottom: .5em;
   max-width: 10.9568em;
   margin-bottom: .6em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngBrandColor__subtitle {
     font-size: 5.6em;
     font-weight: 100; } }
 .ngBrandColor__copy {
   font-size: 1.8em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em;
   max-width: 540px; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngBrandColor__copy {
     font-size: 2em; } }
 .ngBrandColor__logoBlock p {
@@ -3589,7 +3605,7 @@ a.Quote__name:hover {
   width: 100%;
   margin-top: 1em;
   text-align: center; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngBrandColor__logoBlock p {
     font-size: 1.5em; } }
 .ngBrandColor__row {
@@ -3648,7 +3664,7 @@ a.Quote__name:hover {
   line-height: 1.11538;
   letter-spacing: -.025em;
   margin-bottom: .09615em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngBrandPalette__title {
     font-size: 5.6em;
     font-weight: 200; } }
@@ -3661,19 +3677,19 @@ a.Quote__name:hover {
   letter-spacing: -.035em;
   color: #8d8f9a;
   margin-bottom: .5em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngBrandPalette__subtitle {
     font-size: 5.6em;
     font-weight: 100; } }
 
 .ngBrandPalette__copy {
   font-size: 1.8em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em;
   max-width: 520px; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngBrandPalette__copy {
     font-size: 2em; } }
 
@@ -3695,7 +3711,7 @@ a.Quote__name:hover {
   width: 100%;
   margin-top: 1em;
   text-align: center; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngBrandPalette__sideImage p {
     font-size: 1.5em; } }
 @media screen and (min-width: 1080px) {
@@ -3744,7 +3760,7 @@ a.Quote__name:hover {
   margin-bottom: 1em;
   color: rgba(18, 42, 102, .67);
   margin-top: 20px; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngBrandPalette__pallette .pallette__colorInfo {
     font-size: 1.5em; } }
 
@@ -3829,7 +3845,7 @@ a.Quote__name:hover {
   line-height: 1.11538;
   letter-spacing: -.025em;
   margin-bottom: .09615em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngTees__title {
     font-size: 5.6em;
     font-weight: 200; } }
@@ -3841,17 +3857,17 @@ a.Quote__name:hover {
   letter-spacing: -.035em;
   color: #8d8f9a;
   margin-bottom: .5em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngTees__subtitle {
     font-size: 5.6em;
     font-weight: 100; } }
 .ngTees__copy {
   font-size: 1.8em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngTees__copy {
     font-size: 2em; } }
 @media screen and (min-width: 1080px) {
@@ -3871,13 +3887,13 @@ a.Quote__name:hover {
     margin-bottom: 150px; } }
 .ngTees__item p {
   font-size: 1.7em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 400;
   margin-bottom: 1em;
   margin-top: 1em;
   padding-right: 15px; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngTees__item p {
     font-size: 1.8em; } }
 @media screen and (min-width: 1080px) {
@@ -3925,7 +3941,7 @@ a.Quote__name:hover {
   letter-spacing: -.025em;
   margin-bottom: .09615em;
   color: #fff; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngReady__title {
     font-size: 5.6em;
     font-weight: 200; } }
@@ -3938,19 +3954,19 @@ a.Quote__name:hover {
   color: #8d8f9a;
   margin-bottom: .5em;
   color: rgba(0, 0, 0, .5); }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngReady__subtitle {
     font-size: 5.6em;
     font-weight: 100; } }
 .ngReady__copy {
   font-size: 1.8em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em;
   max-width: 515px;
   color: #fff; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngReady__copy {
     font-size: 2em; } }
 .ngReady__imageContent {
@@ -4003,7 +4019,7 @@ a.Quote__name:hover {
   letter-spacing: -.025em;
   margin-bottom: .09615em;
   color: #fff; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngResponsive__title {
     font-size: 5.6em;
     font-weight: 200; } }
@@ -4015,19 +4031,19 @@ a.Quote__name:hover {
   letter-spacing: -.035em;
   color: #8d8f9a;
   margin-bottom: .5em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngResponsive__subtitle {
     font-size: 5.6em;
     font-weight: 100; } }
 .ngResponsive__copy {
   font-size: 1.8em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em;
   max-width: 515px;
   color: #fff; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngResponsive__copy {
     font-size: 2em; } }
 @media screen and (min-width: 1080px) {
@@ -4092,7 +4108,7 @@ a.Quote__name:hover {
   line-height: 1.11538;
   letter-spacing: -.025em;
   margin-bottom: .09615em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngTheDay__title {
     font-size: 5.6em;
     font-weight: 200; } }
@@ -4104,18 +4120,18 @@ a.Quote__name:hover {
   letter-spacing: -.035em;
   color: #8d8f9a;
   margin-bottom: .5em; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngTheDay__subtitle {
     font-size: 5.6em;
     font-weight: 100; } }
 .ngTheDay__copy {
   font-size: 1.8em;
-  letter-spacing: .025em;
+  letter-spacing: .015em;
   line-height: 1.55556;
   font-weight: 300;
   margin-bottom: 1em;
   max-width: 515px; }
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 720px) {
   .ngTheDay__copy {
     font-size: 2em; } }
 .ngTheDay__row {

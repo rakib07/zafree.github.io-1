@@ -9,7 +9,7 @@
   flex-wrap: wrap
   pointer-events: none
   height: 80px
-  +laptop
+  +tablet
     height: 130px
   &__container
     +container
@@ -81,7 +81,7 @@
       &:last-child
         margin-right: 4px + 56
       
-      &--isActive
+      &.active
         &::before
           content: ""
           position: absolute
@@ -96,6 +96,7 @@
 
       
 #navigation
+  min-width: 320px
   z-index: 100
   // .modal__content
   //   transform: translateY(-100%)
@@ -108,7 +109,7 @@
   // background-color: rgba($black, .2)
   display: flex
   align-items: center
-  +laptop
+  +tablet
     height: 130px
   &__container
     +container
@@ -126,7 +127,7 @@
   justify-content: flex-start
   &__svg
     height: 14px
-    +laptop
+    +tablet
       height: 18px
     // width: 170px
     // background-color: rgba($black, .03)
@@ -145,30 +146,25 @@
     align-items: center
     flex-flow: row wrap
     justify-content: flex-start
-    +laptop
+    +tablet
       height: 130px
-
-  &__row
-    display: none
-    +laptop
-      display: block
 
 
   &__inner
-    padding-top: $gutter*2
+    padding-top: $gutter
     padding-bottom: $gutter*2
     display: flex
     flex-flow: row wrap
     align-items: stretch
     justify-content: flex-start
-    +laptop
+    +tablet
       padding-top: $gutter*2
       padding-bottom: $gutter*4
 
   &__main
     position: relative
     width: 100%
-    +laptop
+    +tablet
       width: 50%
   &__navigation
     display: flex
@@ -186,8 +182,9 @@
     padding-top: 5px
     padding-bottom: 5px
     +laptop
-      width: 50%
-    // border: 1px solid red
+      // padding-left: 8.33333% * 2
+      // width: 50%
+      // border: 1px solid red
 
   &__secondaryNavigation
     width: 100%
@@ -197,15 +194,27 @@
     align-items: stretch
     justify-content: flex-start
     flex-direction: row
+    +tablet
+      width: 50%
+      // background-color: rgba(red, 0.1)
     +laptop
       margin-top: 2em
-      margin-left: 8.33333%
-      width: 41.66667%
+      // background-color: rgba(green, 0.1)
   &__secondaryColumn
     align-self: stretch
     margin-bottom: 3em
     width: 50%
-    max-width: 220px
+    +laptop
+      width: 33.33333%
+    &.misc
+      width: 100%
+      margin-bottom: 70px
+      +laptop
+        width: 33.33333%
+        max-width: 190px
+      a:hover
+        color: inherit
+        text-decoration: none
   &__secondaryTitle
     +copy-read
     color: #757575
