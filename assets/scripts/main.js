@@ -4667,16 +4667,16 @@ function factory(window, EvEmitter) {
   'use strict';
 
   var elem = document.querySelector('.RecentCarousel');
-  var flkty = new Flickity(elem, {
-    // options
-    cellAlign: 'left',
-    freeScroll: true,
-    contain: true,
-    // prevNextButtons: false,
-    pageDots: false,
-    // groupCells: 2,
-    arrowShape: 'M40.9,50l14,14l4.2-4.2L49.3,50l9.8-9.8L54.9,36L40.9,50z'
-  }); // gsap.set("#avatar", {translateX: "-100px", opacity: 0.5});
+
+  if (typeof elem != 'undefined' && elem != null) {
+    var flkty = new Flickity(elem, {
+      cellAlign: 'left',
+      freeScroll: true,
+      contain: true,
+      pageDots: false,
+      arrowShape: 'M40.9,50l14,14l4.2-4.2L49.3,50l9.8-9.8L54.9,36L40.9,50z'
+    });
+  } // gsap.set("#avatar", {translateX: "-100px", opacity: 0.5});
   // gsap.set("#bubble", {opacity: 0});
   // var action = document.getElementById('action'),
   //     init = document.getElementById('init'),
@@ -4716,6 +4716,7 @@ function factory(window, EvEmitter) {
   //       gsap.to(".item", {translateY: "-30px", opacity: 0.5});
   // }
   // 
+
 
   gsap.set("#navigation .modal__content", {
     translateY: "-100%"

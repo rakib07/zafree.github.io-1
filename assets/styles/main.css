@@ -2516,6 +2516,8 @@ a.Quote__name:hover {
   padding-left: 15px;
   padding-right: 15px; }
 .PressDownloadImage__item {
+  position: relative;
+  display: block;
   margin-bottom: 30px; }
 
 .DeligramBrand {
