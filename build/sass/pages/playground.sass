@@ -1,0 +1,118 @@
+.PlaygroundGrid
+  position: relative
+  $root: &
+  &__list
+    display: flex
+    flex-flow: row wrap
+    margin-left: -30px
+    margin-right: -30px
+    +tablet
+      margin-left: 0
+      margin-right: 0
+
+  &__item
+    display: block
+    width: 100%
+    margin-bottom: 80px
+    
+
+  &--big
+    #{$root}__list
+      +tablet
+        margin-left: -35px
+        margin-right: -35px
+      +laptop
+        margin-left: -35px
+        margin-right: -35px
+    #{$root}__item
+      +tablet
+        width: 50%
+        padding-left: 35px
+        padding-right: 35px
+    .Playground
+      &__content
+        max-width: 420px
+
+  &--medium
+    #{$root}__list
+      +tablet
+        margin-left: -35px
+        margin-right: -35px
+      +laptop
+        margin-left: -35px
+        margin-right: -35px
+    #{$root}__item
+      +tablet
+        width: 50%
+        padding-left: 35px
+        padding-right: 35px
+    .Playground
+      &__content
+        max-width: 420px
+
+  &--small
+    #{$root}__list
+      +tablet
+        margin-left: -22.5px
+        margin-right: -22.5px
+      +laptop
+        margin-left: -22.5px
+        margin-right: -22.5px
+    #{$root}__item
+      +tablet
+        width: 33.3333%
+        padding-left: 22.5px
+        padding-right: 22.5px
+
+    .Playground
+      &__copy
+        font-size: 1.6em
+        +tablet
+          font-size: 1.8em
+          margin-bottom: 0.75em
+      &__learnmore
+        +tablet
+          font-size: 1.4em  
+
+      
+
+.Playground
+  position: relative
+  display: block
+  &__imageWrap
+    position: relative
+    background-color: #fafafa
+    img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+  &__content
+    position: relative
+    display: flex
+    flex-direction: column
+    padding-right: 30px
+    padding-left: 30px
+    max-width: 550px
+    +tablet
+      padding-left: 0
+
+  &__heading
+    +copy
+    margin-top: 1em
+    margin-bottom: 0.5em
+    font-weight: 500
+    +tablet
+      margin-top: 1.5em
+
+  &__copy
+    +copy
+  
+  &__learnmore
+    font-size: 1.4em
+    letter-spacing: .015em
+    line-height: 1.55556
+    font-weight: 500
+    +tablet
+      font-size: 1.6em  
+
