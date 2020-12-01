@@ -323,6 +323,8 @@
         background-color: transparent
 
 .ngResponsive
+  position: relative
+  overflow: hidden
   padding-top: $gutter*2.5
   background-color: #0B0C12
   // background-color: #141414
@@ -334,10 +336,10 @@
     +laptop
       display: flex
   &__heading
-    padding-bottom: $gutter
+    padding-bottom: $gutter*2
     +laptop
       width: 100% - 46.745
-      padding-top: $gutter
+      // padding-top: $gutter
   &__content
     +laptop
       max-width: 560px + $gutter
@@ -379,6 +381,8 @@
       margin-left: -$gutter*1.5
     
 .ngTheDay
+  position: relative
+  overflow: hidden
   padding-top: $gutter*2.5
   padding-bottom: $gutter*2.5
   +laptop

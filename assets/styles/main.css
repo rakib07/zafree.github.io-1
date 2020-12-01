@@ -1720,7 +1720,7 @@ a.Quote__name:hover {
 .MoreProjects__header {
   padding-top: 90px;
   margin-bottom: 30px;
-  border-top: 1px solid #ebebeb; }
+  border-top: 1px solid #c8c8c8; }
 @media screen and (min-width: 1080px) {
   .MoreProjects__header {
     position: relative;
@@ -4116,6 +4116,8 @@ a.Quote__name:hover {
   background-color: transparent; }
 
 .ngResponsive {
+  position: relative;
+  overflow: hidden;
   padding-top: 75px;
   background-color: #0b0c12; }
 @media screen and (min-width: 1080px) {
@@ -4142,11 +4144,10 @@ a.Quote__name:hover {
   .ngResponsive__row {
     display: flex; } }
 .ngResponsive__heading {
-  padding-bottom: 30px; }
+  padding-bottom: 60px; }
 @media screen and (min-width: 1080px) {
   .ngResponsive__heading {
-    width: 53.255%;
-    padding-top: 30px; } }
+    width: 53.255%; } }
 @media screen and (min-width: 1080px) {
   .ngResponsive__content {
     max-width: 590px;
@@ -4212,6 +4213,8 @@ a.Quote__name:hover {
     margin-left: -45px; } }
 
 .ngTheDay {
+  position: relative;
+  overflow: hidden;
   padding-top: 75px;
   padding-bottom: 75px; }
 @media screen and (min-width: 1080px) {
