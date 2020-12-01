@@ -29,6 +29,23 @@
     max-width: 1140px
     padding-right: 70px
     padding-left: 70px
+
+=container990
+  position: relative
+  min-height: 1px
+  width: 100%
+  margin-right: auto
+  margin-left: auto
+  padding-right: $gutter
+  padding-left: $gutter
+  +tablet
+    max-width: 990px + (50 * 2)
+    padding-right: 50px
+    padding-left: 50px
+  +laptop
+    max-width: 990px + (70 * 2)
+    padding-right: 70px
+    padding-left: 70px
     
 =clearfix
   &:before,
@@ -87,7 +104,7 @@
   font-family: $family-serif
   font-weight: 300
   letter-spacing: -0.01em
-  +laptop
+  +tablet
     font-size: 3.2em
     font-weight: 200
 
@@ -101,7 +118,7 @@
   line-height: 1.11538
   letter-spacing: -0.025em
   margin-bottom: 0.09615em
-  +laptop
+  +tablet
     font-size: 6em
     font-weight: 200
 
@@ -113,7 +130,7 @@
   letter-spacing: -0.035em
   color: #8d8f9a
   margin-bottom: .5em
-  +laptop
+  +tablet
     font-size: 6em
     font-weight: 100
 
@@ -125,7 +142,7 @@
   line-height: 1.11538
   letter-spacing: -0.025em
   margin-bottom: 0.09615em
-  +laptop
+  +tablet
     font-size: 5.6em
     font-weight: 200
 
@@ -137,7 +154,7 @@
   letter-spacing: -0.035em
   color: #8d8f9a
   margin-bottom: .5em
-  +laptop
+  +tablet
     font-size: 5.6em
     font-weight: 100
 
@@ -148,7 +165,7 @@
   line-height: 1.11538
   letter-spacing: -0.025em
   margin-bottom: 0.09615em
-  +laptop
+  +tablet
     font-size: 5.2em
     font-weight: 200
 
@@ -160,7 +177,7 @@
   letter-spacing: -0.035em
   color: #8d8f9a
   margin-bottom: .5em
-  +laptop
+  +tablet
     font-size: 5.2em
     font-weight: 100
 
@@ -171,29 +188,29 @@
 
 =copy-hero
   font-size: 1.9em
-  letter-spacing: .025em
+  letter-spacing: .015em
   line-height: 1.55556
   font-weight: 300
   margin-bottom: 1em
-  +laptop
+  +tablet
     font-size: 2.4em
 
 =copy
   font-size: 1.8em
-  letter-spacing: .025em
+  letter-spacing: .015em
   line-height: 1.55556
   font-weight: 300
   margin-bottom: 1em
-  +laptop
+  +tablet
     font-size: 2em
 
 =copy-read
   font-size: 1.7em
-  letter-spacing: .025em
+  letter-spacing: .015em
   line-height: 1.55556
   font-weight: 400
   margin-bottom: 1em 
-  +laptop
+  +tablet
     font-size: 1.8em
 
 =copy-sm
@@ -202,8 +219,8 @@
   line-height: 1.55556
   font-weight: 300
   margin-bottom: 1em
-  +laptop
-    font-size: 1.5em  
+  +tablet
+    font-size: 1.5em 
 
 =copy-xs
   font-size: 1.1em
@@ -211,17 +228,17 @@
   line-height: 1.55556
   font-weight: 300
   margin-bottom: 1em
-  +laptop
-    font-size: 1.3em  
+  +tablet
+    font-size: 1.3em 
 
 
 // labels
 =label-hero
   font-size: 1.9em
-  letter-spacing: .025em
+  letter-spacing: .015em
   line-height: 1.55556
   font-weight: 500
   margin-top: 2.08333em
   margin-bottom: .83333em
-  +laptop
+  +tablet
     font-size: 2.4em  

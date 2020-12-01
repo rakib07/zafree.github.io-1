@@ -1,0 +1,114 @@
+.Collage
+  position: relative
+  overflow: hidden
+  &__container
+    +container
+  &__wrapper
+    position: relative
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    align-items: center
+  &__item
+    background-color: rgba(red, 0.1)
+    &:not(:first-child)
+      margin-left: 15px
+      +laptop
+        margin-left: 30px
+    &.i1
+      min-width: 140px
+      +laptop
+        min-width: 410px
+        // height: 460px
+    &.i2
+      min-width: 110px
+      +laptop
+        min-width: 300px
+        // height: 626px
+    &.i3
+      min-width: 110px
+      +laptop
+        min-width: 300px
+        // height: 430px
+    &.i4
+      min-width: 60px
+      +laptop
+        min-width: 190px
+        // height: 460px
+    &.i5
+      min-width: 120px
+      +laptop
+        min-width: 370px
+        // height: 460px
+
+
+.Separator
+  +container990
+  &__separator
+    width: 100%
+    height: 1px
+    border: 0
+    background: #c8c8c8
+
+.Content
+  position: relative
+  padding-top: 80px
+  padding-bottom: 80px
+  +laptop
+    padding-top: 160px
+    padding-bottom: 160px
+  &__container
+    +container990
+  &__row
+    position: relative
+  &__inner
+    +laptop
+      // padding-left: 150px
+
+  &__wrap
+    margin-top: 50px
+    +laptop
+      margin-top: 80px
+      // padding-left: 150px
+      // padding-right: 150px
+      // background-color: rgba(red, 0.1)
+
+  &__heading
+    font-size: 1.9em
+    line-height: 1.44759
+    font-weight: 500
+    letter-spacing: -0.01em
+    max-width: 520px
+    +tablet
+      max-width: 720px
+      font-size: 3.2em
+  &__subtitle
+    color: #757575
+    font-weight: 300
+  &__copy
+    font-size: 1.9em
+    letter-spacing: -0.01em
+    line-height: 1.55556
+    font-weight: 400
+    max-width: 520px
+    +tablet
+      font-size: 2.4em 
+      max-width: 720px
+    p
+      margin-top: 1.28333em
+
+    ul
+      list-style: circle outside
+      padding-left: $gutter*.75
+      margin-top: 1.28333em
+      li
+        margin-top: 0.5em
+        +tablet
+          margin-top: 0
+        a
+          color: #2776ed
+          display: block
+          +laptop
+            display: inline
+
+  
