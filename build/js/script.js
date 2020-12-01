@@ -1,17 +1,29 @@
 ;(function() {
   'use strict';
 
-    var elem = document.querySelector('.RecentCarousel');
+  // document.querySelectorAll("nav button").forEach((btn, index) => {
+  //   btn.addEventListener("click", () => {
+  //     gsap.to(window, {duration: 1, scrollTo:{y:"#section" + (index + 1), offsetY:70}});
+  //   });
+  // });
 
-    if (typeof(elem) != 'undefined' && elem != null) {
-      var flkty = new Flickity( elem, {
-        cellAlign: 'left',
-        freeScroll: true,
-        contain: true,
-        pageDots: false,
-        arrowShape: 'M40.9,50l14,14l4.2-4.2L49.3,50l9.8-9.8L54.9,36L40.9,50z'
-      });
-    }
+  var heroButton = document.querySelector('.Hero__button');
+
+  heroButton.addEventListener("click", () => {
+    gsap.to(window, {duration: 1, scrollTo:{y:"#Recent", offsetY:0}});
+  });
+
+  var elem = document.querySelector('.RecentCarousel');
+
+  if (typeof(elem) != 'undefined' && elem != null) {
+    var flkty = new Flickity( elem, {
+      cellAlign: 'left',
+      freeScroll: true,
+      contain: true,
+      pageDots: false,
+      arrowShape: 'M40.9,50l14,14l4.2-4.2L49.3,50l9.8-9.8L54.9,36L40.9,50z'
+    });
+  }
 
 
   // gsap.set("#avatar", {translateX: "-100px", opacity: 0.5});
