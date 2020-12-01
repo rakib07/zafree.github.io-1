@@ -1911,6 +1911,21 @@ a.Quote__name:hover {
     max-width: 720px; } }
 .Content__copy p {
   margin-top: 1.28333em; }
+.Content__copy ul {
+  list-style: circle outside;
+  padding-left: 22.5px;
+  margin-top: 1.28333em; }
+.Content__copy ul li {
+  margin-top: .5em; }
+@media screen and (min-width: 720px) {
+  .Content__copy ul li {
+    margin-top: 0; } }
+.Content__copy ul li a {
+  color: #2776ed;
+  display: block; }
+@media screen and (min-width: 1080px) {
+  .Content__copy ul li a {
+    display: inline; } }
 
 .ResumeHero {
   position: relative;
