@@ -8,13 +8,13 @@
   // });
 
   var heroButton = document.querySelector('.Hero__button');
-
-  heroButton.addEventListener("click", () => {
-    gsap.to(window, {duration: 1, scrollTo:{y:"#Recent", offsetY:0}});
-  });
+  if (typeof(heroButton) != 'undefined' && heroButton != null) {
+    heroButton.addEventListener("click", () => {
+      gsap.to(window, {duration: 1, scrollTo:{y:"#Recent", offsetY:0}});
+    });
+  }
 
   var elem = document.querySelector('.RecentCarousel');
-
   if (typeof(elem) != 'undefined' && elem != null) {
     var flkty = new Flickity( elem, {
       cellAlign: 'left',
