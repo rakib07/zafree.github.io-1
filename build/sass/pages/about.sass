@@ -1,6 +1,13 @@
 .Collage
   position: relative
   overflow: hidden
+  &__scroll
+    margin-bottom: -30px
+    padding-bottom: 30px
+    overflow-x: scroll
+    &::-webkit-scrollbar
+      -webkit-appearance: none
+      display: none
   &__container
     +container
   &__wrapper
@@ -10,37 +17,43 @@
     flex-wrap: nowrap
     align-items: center
   &__item
-    background-color: rgba(red, 0.1)
-    &:not(:first-child)
-      margin-left: 15px
+    position: relative
+    margin-right: 15px
+    +laptop
+      margin-right: 30px
+    &:last-child
+      box-sizing: content-box
+      padding-right: $gutter
+      +tablet
+        padding-right: 50px
       +laptop
-        margin-left: 30px
+        padding-right: calc(((100vw - 1430px) / 2) + 70px)
+    
     &.i1
       min-width: 140px
-      +laptop
+      +tablet
         min-width: 410px
         // height: 460px
     &.i2
       min-width: 110px
-      +laptop
+      +tablet
         min-width: 300px
         // height: 626px
     &.i3
       min-width: 110px
-      +laptop
+      +tablet
         min-width: 300px
         // height: 430px
     &.i4
       min-width: 60px
-      +laptop
+      +tablet
         min-width: 190px
         // height: 460px
     &.i5
       min-width: 120px
-      +laptop
+      +tablet
         min-width: 370px
         // height: 460px
-
 
 .Separator
   +container990
@@ -82,6 +95,7 @@
     +tablet
       max-width: 720px
       font-size: 3.2em
+    
   &__subtitle
     color: #757575
     font-weight: 300
@@ -111,4 +125,161 @@
           +laptop
             display: inline
 
+  &.WhatIDoBrief
+    padding-top: 30px
+    +laptop
+      padding-top: 60px
+
+.myStandard
+  position: relative
+  margin-top: 40px
+  margin-bottom: 60px
+  padding-top: 40px
+  // padding-bottom: 60px
+  background-color: #fafafa
+  overflow-y: hidden
+  +tablet
+    margin-top: 80px
+    margin-bottom: 120px
+    padding-top: 80px
+    // padding-bottom: 120px
+  .Content
+    padding-bottom: 0
+    +tablet
+      padding-bottom: 0
+  &__scroll
+    overflow: hidden
+    +tablet
+      margin-bottom: -30px
+      padding-bottom: 30px
+      overflow-x: scroll
+      &::-webkit-scrollbar
+        -webkit-appearance: none
+        display: none
+  &__container
+    +container990
+
+  &__inner
+    position: relative
+    padding-top: 60px
+    padding-bottom: 60px
+    +tablet
+      display: flex
+      flex-flow: row nowrap
+      padding-top: 120px
+      padding-bottom: 120px
+  &__item
+    position: relative
+    margin-bottom: 60px
+    margin-right: -30px
+    +tablet
+      min-width: 75%
+      max-width: 75%
+      width: 100%
+      margin-right: 80px
+    +laptop
+      min-width: 720px
+      max-width: 720px
+    &:last-child
+      +tablet
+        box-sizing: content-box
+        padding-right: 50px
+      +laptop
+        padding-right: calc(((100vw - 1430px) / 2) + 70px)
   
+  &__image
+    position: relative
+    width: 100%
+
+  &__content
+    padding-top: 20px
+    padding-right: 30px
+    +tablet
+      padding-top: 40px
+      padding-left: 60px
+      padding-right: 0
+      max-width: 520px
+  &__heading
+    +copy
+    font-weight: 500
+    margin-bottom: 0.5em
+  &__copy
+    +copy
+    font-weight: 400
+    color: #8d8f9a
+    letter-spacing: 0
+  
+.Doing
+  margin-top: 100px
+  padding-top: 100px
+  padding-bottom: 100px
+  background-image: linear-gradient(#F6F5F7 0%, #ffffff 1000px, #ffffff 100%)
+  +tablet
+    padding-top: 200px
+    padding-bottom: 200px
+  &__header
+    +container990
+  &__title
+    +title-hero
+  &__subtitle
+    +subtitle-hero
+
+  .Content
+    &__heading,
+    &__copy
+      +tablet
+        max-width: 620px
+
+.Track
+  position: relative
+  margin-top: 80px
+  +laptop
+    margin-top: 160px
+  &--first
+    margin-top: 40px
+    +laptop
+      margin-top: 80px
+  &__container
+    +container
+  &__row
+    position: relative
+    display: flex
+    flex-flow: row nowrap
+  &__item
+    width: 100%
+    min-width: 272px
+    min-height: 100px
+    // background-color: rgba(red, 0.1)
+    padding-top: 60px
+    &:first-child
+      min-width: 384px
+      padding-top: 0
+    &:not(:last-child)
+      margin-right: $gutter
+
+.Example
+  display: block
+  background-color: $white
+  &__imageWrap
+    position: relative
+    background-color: #DADBDE
+    img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+  &__content
+    // position: relative
+    display: flex
+    flex-direction: column
+    padding-top: 20px
+
+  &__heading
+    +copy-read
+    margin-bottom: 0
+    font-weight: 400
+
+  &__copy
+    +copy-read
+    margin-bottom: 0
+    color: #757575
