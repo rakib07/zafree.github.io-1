@@ -28,12 +28,17 @@
     line-height: 1.39286
     +laptop
       font-size: 2.8em
-    &::before
-      content: "\201C"
-      margin-left: -.35em
-      margin-right: .1em
-    &::after
-      content: "\201D"
+    p
+      &:first-child
+        &::before
+          content: "\201C"
+          margin-left: -.35em
+          margin-right: .1em
+      &:last-child
+        &::after
+          content: "\201D"
+      &:not(:first-child)
+        margin-top: 1em
 
   &__footer
     display: flex
