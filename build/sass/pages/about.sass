@@ -233,12 +233,20 @@
 .Track
   position: relative
   margin-top: 80px
+  overflow: hidden
   +laptop
     margin-top: 160px
   &--first
     margin-top: 40px
     +laptop
       margin-top: 80px
+  &__scroll
+    margin-bottom: -30px
+    padding-bottom: 30px
+    overflow-x: scroll
+    &::-webkit-scrollbar
+      -webkit-appearance: none
+      display: none
   &__container
     +container
   &__row
@@ -247,19 +255,34 @@
     flex-flow: row nowrap
   &__item
     width: 100%
-    min-width: 272px
+    min-width: 60%
+    max-width: 60%
     min-height: 100px
-    // background-color: rgba(red, 0.1)
-    padding-top: 60px
+    margin-right: $gutter
+    +tablet
+      padding-top: 20px
+      min-width: 272px
+      max-width: 272px
     &:first-child
-      min-width: 384px
+      min-width: 80%
+      max-width: 80%
       padding-top: 0
-    &:not(:last-child)
-      margin-right: $gutter
+      +tablet
+        min-width: 384px
+        max-width: 384px
+    // &:not(:last-child)
+    //   margin-right: $gutter
+    &:last-child
+      box-sizing: content-box
+      padding-right: $gutter
+      +tablet
+        padding-right: 50px
+      +laptop
+        padding-right: calc(((100vw - 1430px) / 2) + 70px)
 
 .Example
+  position: relative
   display: block
-  background-color: $white
   &__imageWrap
     position: relative
     background-color: #DADBDE
@@ -269,7 +292,7 @@
       left: 0
       width: 100%
   &__content
-    // position: relative
+    position: relative
     display: flex
     flex-direction: column
     padding-top: 20px
