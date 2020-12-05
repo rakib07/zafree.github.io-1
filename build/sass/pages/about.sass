@@ -125,9 +125,30 @@
           +laptop
             display: inline
 
-  &.WhatIDoBrief
+  &.myHelp
+    padding-top: 0
+    padding-bottom: 0
+    // +laptop
+    //   padding-top: 60px
+    .Content__wrap
+      margin-top: 0
+
+    .ImageBlock
+      .i1x
+        +tablet
+          display: none
+      .i2x
+        display: none
+        +tablet
+          display: block
+          
+    .image
+      margin-left: 0
+
+    
+  &.aboutMyself
     padding-top: 30px
-    +laptop
+    +tablet
       padding-top: 60px
 
 .myStandard
@@ -208,7 +229,12 @@
     font-weight: 400
     color: #8d8f9a
     letter-spacing: 0
-  
+
+.myHelp
+  position: relative
+  &__container
+    +container
+
 .Doing
   margin-top: 100px
   padding-top: 100px
