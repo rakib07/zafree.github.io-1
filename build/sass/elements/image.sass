@@ -74,3 +74,23 @@ img
     > .image__canvas
       opacity: 0
       transition: opacity 1s .5s
+
+.video
+  position: relative
+  $root: &
+  &__aspectRatio
+    background-color: rgba(#E62B3A, .18)
+  &__video
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+  &--orderamiCover
+    #{$root}__aspectRatio
+      background-color: rgba(#E62B3A, .18)
+      .i1x
+        padding-bottom: 124%
+      .i2x
+        padding-bottom: 75%
+      
